@@ -135,6 +135,8 @@ Testing occurs against the following versions:
 * Pypy (≈2.7.10)
 * Pypy3 (≈3.2.5)
 
+To begin…
+
 1. Install [pyenv] on your own before running tests.
 
 1. You need to install all of the supported versions of Python. (This will take a while.) If you would prefer to install your own copies of the supported Python versions (listed above), feel free to manage them yourself.
