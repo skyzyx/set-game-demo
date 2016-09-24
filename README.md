@@ -171,7 +171,7 @@ Docs can be viewed at <https://skyzyx.github.io/set-game-demo/>.
 ## Deploying
 
 1. The `Makefile` (yes, `Makefile`) has a series of commands to simplify the development and deployment process.
-1. Also install [Chag](https://github.com/mtdowling/chag). This is used for managing the `CHANGELOG` and annotating the Git release correctly.
+1. Also install [Chag]. This is used for managing the `CHANGELOG` and annotating the Git release correctly.
 
 ### Updating the CHANGELOG
 
@@ -254,6 +254,7 @@ See also the list of [contributors](https://github.com/skyzyx/set-game-demo/grap
 Licensed for use under the terms of the [Apache 2.0] license.
 
   [Apache 2.0]: http://opensource.org/licenses/Apache-2.0
+  [Chag]: https://github.com/mtdowling/chag
   [distutils]: https://docs.python.org/3/library/distutils.html
   [Pandoc]: http://pandoc.org
   [pyenv-virtualenvwrapper]: https://github.com/yyuu/pyenv-virtualenvwrapper
