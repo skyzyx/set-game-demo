@@ -1,1 +1,10 @@
-.vendor
+*.egg-info/
+*.pyc
+.coverage
+.tox/
+.vendor/
+build/
+coverage.xml
+dist/
+docs/
+htmlcov
