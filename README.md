@@ -1,15 +1,15 @@
 # Set
 
 [![Source](http://img.shields.io/badge/source-skyzyx/set-game-demo-blue.svg?style=flat-square)](https://github.com/skyzyx/set-game-demo)
-#[![Downloads](https://img.shields.io/pypi/dm/wepay-signer.svg?style=flat-square)](https://github.com/skyzyx/set-game-demo/releases)
+@[![Downloads](https://img.shields.io/pypi/dm/wepay-signer.svg?style=flat-square)](https://github.com/skyzyx/set-game-demo/releases)
 [![Release](https://img.shields.io/github/release/skyzyx/set-game-demo.svg?style=flat-square)](https://github.com/skyzyx/set-game-demo/releases)
-#[![Pypi Release](https://img.shields.io/pypi/v/wepay-signer.svg?style=flat-square)](https://pypi.python.org/pypi/wepay-signer)
+@[![Pypi Release](https://img.shields.io/pypi/v/wepay-signer.svg?style=flat-square)](https://pypi.python.org/pypi/wepay-signer)
 [![Open Issues](http://img.shields.io/github/issues/skyzyx/set-game-demo.svg?style=flat-square)](https://github.com/skyzyx/set-game-demo/issues)
 [![Build Status](http://img.shields.io/travis/skyzyx/set-game-demo/master.svg?style=flat-square)](https://travis-ci.org/skyzyx/set-game-demo)
-#[![Implementation](https://img.shields.io/pypi/implementation/wepay-signer.svg?style=flat-square)](https://python.org)
-#[![Python Versions](https://img.shields.io/pypi/pyversions/wepay-signer.svg?style=flat-square)](https://python.org)
-#[![Package Format](https://img.shields.io/pypi/format/wepay-signer.svg?style=flat-square)](http://pythonwheels.com)
-#[![Stability](https://img.shields.io/pypi/status/wepay-signer.svg?style=flat-square)](https://pypi.python.org/pypi/wepay-signer)
+@[![Implementation](https://img.shields.io/pypi/implementation/wepay-signer.svg?style=flat-square)](https://python.org)
+@[![Python Versions](https://img.shields.io/pypi/pyversions/wepay-signer.svg?style=flat-square)](https://python.org)
+@[![Package Format](https://img.shields.io/pypi/format/wepay-signer.svg?style=flat-square)](http://pythonwheels.com)
+@[![Stability](https://img.shields.io/pypi/status/wepay-signer.svg?style=flat-square)](https://pypi.python.org/pypi/wepay-signer)
 [![Coverage Status](http://img.shields.io/coveralls/skyzyx/set-game-demo/master.svg?style=flat-square)](https://coveralls.io/r/skyzyx/set-game-demo?branch=master)
 [![Code Climate](http://img.shields.io/codeclimate/github/skyzyx/set-game-demo.svg?style=flat-square)](https://codeclimate.com/github/skyzyx/set-game-demo)
 [![Code Quality](http://img.shields.io/scrutinizer/g/skyzyx/set-game-demo.svg?style=flat-square)](https://scrutinizer-ci.com/g/skyzyx/set-game-demo)
@@ -131,7 +131,7 @@ Testing occurs against the following versions:
 * Python 3.3
 * Python 3.4
 * Python 3.5
-* Python 3.6 (dev)
+* Python 3.6 (beta)
 * Pypy (≈2.7.10)
 * Pypy3 (≈3.2.5)
 
@@ -142,7 +142,30 @@ To begin…
 1. You need to install all of the supported versions of Python. (This will take a while.) If you would prefer to install your own copies of the supported Python versions (listed above), feel free to manage them yourself.
 
    ```bash
-   make install-python
+   pyenv install 3.6.0b1 && \
+   pyenv install 3.5.2 && \
+   pyenv install 3.4.5 && \
+   pyenv install 3.3.6 && \
+   pyenv install 2.7.12 && \
+   pyenv install pypy-5.3.1 && \
+   pyenv install pypy3-2.4.0 && \
+   pyenv rehash && \
+   eval "$(pyenv init -)" && \
+   pyenv global system 3.6.0b1 3.5.2 3.4.5 3.3.6 2.7.12 pypy-5.3.1 pypy3-2.4.0
+   ```
+
+   To verify that the installation and configuration were successful, you can run `pyenv versions`. You should see a `*` character in front of every version that we just installed.
+
+   ```bash
+   $ pyenv versions
+   * system (set by ~/.pyenv/version)
+   * 2.7.12 (set by ~/.pyenv/version)
+   * 3.3.6 (set by ~/.pyenv/version)
+   * 3.4.5 (set by ~/.pyenv/version)
+   * 3.5.2 (set by ~/.pyenv/version)
+   * 3.6.0b1 (set by ~/.pyenv/version)
+   * pypy-5.3.1 (set by ~/.pyenv/version)
+   * pypy3-2.4.0 (set by ~/.pyenv/version)
    ```
 
 1. You can run the tests as follows:

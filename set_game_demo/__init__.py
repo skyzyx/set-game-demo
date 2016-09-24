@@ -9,8 +9,6 @@ Copyright (c) 2016 [Ryan Parman](https://github.com/skyzyx).
 """
 
 from __future__ import print_function
-import hashlib
-import hmac
 import six
 
 
