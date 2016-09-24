@@ -1,7 +1,7 @@
 [run]
 branch = True
 include =
-    set/*
+    set_game_demo/*
 
 [report]
 show_missing = 1

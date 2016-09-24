@@ -10,20 +10,20 @@ requires = [
 ]
 
 setup(
-    name='wepay-signer',
+    name='skyzyx-set-game-demo',
     license="Apache License 2.0",
-    author='WePay',
-    author_email='api@wepay.com',
-    url="https://github.com/wepay/signer-python",
+    author='Ryan Parman',
+    author_email='ryan@ryanparman.com',
+    url="https://github.com/skyzyx/set-game-demo",
     install_requires=requires,
     version=version,
     packages=find_packages(exclude=['tests*']),
-    description='A Modern Python 2/3 SDK for signing WePay requests.',
+    description='Simple demo of the game of Set.',
     long_description=open('README.rst').read(),
-    keywords='wepay signer',
+    keywords='set demo game',
     test_suite='nose2.collector.collector',
     classifiers=[
-        'Development Status :: 5 - Production/Stable',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'Natural Language :: English',
         'License :: OSI Approved :: Apache Software License',

@@ -75,7 +75,7 @@ pip install skyzyx-set-game-demo
 And either include it in your scripts:
 
 ```python
-from set-game-demo import Game
+from set_game_demo import Game
 ```
 
 …or run it from the command line.
