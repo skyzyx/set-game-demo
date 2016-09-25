@@ -99,7 +99,6 @@ class SetGame(object):
         self.deck = collections.deque(self.deck)
         self.board = []
 
-
     def deal(self, cards=12):
         """
         Deals a given number of cards from the top (front) of the deck. The default number of cards dealt is `12`.
@@ -112,16 +111,7 @@ class SetGame(object):
 
         return out
 
-
-    def is_a_set(card1, card2, card3):
-        """
-        Determines whether a group of 3 cards is a _set_ or not. A value of `True` means that the group is a set. A
-        value of `False` means that the group is _not_ a set.
-        """
-
-
-
-    def display_cards(self, cards):
+    def display_cards(self, cards): # pragma: no cover
         """
         Accepts an array of cards, and renders them for humans in a table.
         """
@@ -133,10 +123,43 @@ class SetGame(object):
 
         print(t)
 
+    @staticmethod
+    def is_a_set(card1, card2, card3):
+        """
+        Determines whether a group of 3 cards is a _set_ or not. A value of `True` means that the group is a set. A
+        value of `False` means that the group is _not_ a set.
+        """
+
+        for attribute in ["color", "shape", "shading", "number"]:
+            if (SetGame.__all_unique([
+                    getattr(card1, attribute),
+                    getattr(card2, attribute),
+                    getattr(card3, attribute),
+                ]) is False
+                and
+                SetGame.__all_same([
+                    getattr(card1, attribute),
+                    getattr(card2, attribute),
+                    getattr(card3, attribute),
+                ]) is False):
+
+                return False
+
+        # Did we actually make it all the way here?
+        return True
+
+    @staticmethod
+    def __all_unique(x):
+        return len(set(x)) == len(x)
+
+    @staticmethod
+    def __all_same(x):
+        return len(set(x)) == 1
 
 # ------------------------------------------------------------------------------
 
-class SimpleNamespace(object):
+
+class SimpleNamespace(object): # pragma: no cover
     """
     Python doesn't have the same concept as "objects" or "hashes" like Ruby, PHP, JavaScript, Java, and other
     languages do. The closest thing we have is a `dict`, but it doesn't quite behave the same way.
@@ -147,6 +170,7 @@ class SimpleNamespace(object):
     will trade a small bit of performance for convenience in version 1, and flag this as a known issue to resolve in a
     future version.
     """
+
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)
 
