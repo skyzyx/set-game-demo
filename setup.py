@@ -1,10 +1,16 @@
 from setuptools import setup, find_packages
 
+# Read the contents of README.rst. Generate this with `make readme`.
+readme = open('README.rst').read()
+
+# Read the contents of VERSION. Generate this with `make version`.
 version = open('VERSION').read()
 
+# Runtime requirements (which are different from development requirements)
 requires = [
     'autoflake==0.6.6',
     'autopep8==1.2.4',
+    'prettytable==0.7.2',
     'pylint==1.6.4',
     'six==1.10.0',
 ]
@@ -19,7 +25,7 @@ setup(
     version=version,
     packages=find_packages(exclude=['tests*']),
     description='Simple demo of the game of Set.',
-    long_description=open('README.rst').read(),
+    long_description=readme,
     keywords='set demo game',
     test_suite='nose2.collector.collector',
     classifiers=[
@@ -36,4 +42,9 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: Implementation :: PyPy',
     ],
+    entry_points={
+        'console_scripts': [
+            'set-game-demo=set_game_demo:main',
+        ],
+    },
 )

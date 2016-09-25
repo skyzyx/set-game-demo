@@ -25,7 +25,7 @@ docs:
 pushdocs: docs
 	rm -Rf /tmp/gh-pages
 	git clone git@github.com:skyzyx/set-game-demo.git --branch gh-pages --single-branch /tmp/gh-pages
-	cp -Rf ./docs/signer/* /tmp/gh-pages/
+	cp -Rf ./docs/set_game_demo/* /tmp/gh-pages/
 	cd /tmp/gh-pages/ && git add . && git commit -a -m "Automated commit on $$(date)" && git push origin gh-pages
 
 #-------------------------------------------------------------------------------
