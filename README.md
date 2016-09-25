@@ -24,6 +24,15 @@ This project uses [Semantic Versioning](http://semver.org) for managing backward
 
 
 ## The Game
+
+### Core Concepts
+
+* Each _Card_ has 4 _Properties_: color, shape, shading, and number.
+* The _Deck_ is a collection of all of the _Cards_.
+* The _Board_ is a subset of the _Deck_, containing only the cards that are currently in-play.
+* A _Set_ is a collection of 3 cards which meet certain criteria (discussed below). When a _Set_ is found in-play on the _Board_, the _Set_ is removed from play and logged as such.
+* The _Game_ encapsulates all of these concepts and keeps track of them.
+
 ### Game Rules
 
 Each card has an image on it with 4 orthogonal attributes:
@@ -53,10 +62,26 @@ Your task is to model the game in code, and implement the following methods:
 
 For this last method, there will be multiple correct solutions, but any valid list of sets is fine.
 
+### Assumptions
+
+> _“Three cards are a part of a set if, for each property, the values are all the same or all different.”_
+
+This is phrased ambiguously, and the examples given lead me to believe that the following is a better description of the rules.
+
+* Take 3 cards and look at each of their properties one-by-one.
+* If all cards have a different value for that property OR all cards have the same value for that property, then it _may_ be a set.
+* If _any_ properties of step 2 fail the test, then the group is not a set.
+
 ### Problem Parameters
+
+* This problem uses mathematical _combinations_ (as opposed to _permutations_). This results in 81 combinations (`3^4`).
+* Any failure of being a _Set_ means that the group is not a set, so fail as early as possible and move-on.
 
 
 ### Logic
+
+1. Create the deck of available cards by ensuring that every card is unique, and that all combinations of properties are represented. Also, shuffle the deck by default.
+1. Deal 12 cards to the board.
 
 
 ## Requirements
@@ -75,7 +100,7 @@ pip install skyzyx-set-game-demo
 And either include it in your scripts:
 
 ```python
-from set_game_demo import Game
+from set_game_demo import SetGame
 ```
 
 …or run it from the command line.
@@ -90,8 +115,15 @@ set-game-demo -h
 
 ## Known Issues
 
+* This uses an implementation of `SimpleNamespace` that is written in Python instead of C, which is slower than the native `SimpleNamespace` class, but has compatibility with Python 2.7.
+* In a final release, it would be wise to update the `requirements.txt` to allow for ranges of known-good versions instead of locking to one specific version.
+    * Conversely, if this is the sole project running in this virtual environment, locking to a specific known-good version ensures fewer version-compatibility issues.
+
 
 ## Future Improvements
+
+* Update `SimpleNamespace` to leverage the `six` module for passing the C version of the class to Python 3.3+.
+* Update the `test_deal` unit test to verify that we do not attempt to deal a larger number of cards than the deck contains (couldn't quite figure out the right way to call `assertRaises()` from the `unittest` package through the `nose2` interface).
 
 
 ## Development
@@ -168,12 +200,18 @@ To begin…
    * pypy3-2.4.0 (set by ~/.pyenv/version)
    ```
 
-1. You can run the tests as follows:
+1. The following command will package-up your module and install it locally, then run `nose2` to execute the tests in the _default system Python_.
 
    ```bash
    make test
    ```
 
+
+1. After you've run that, you can then execute the tests in all supported versions of Python with the following:
+
+   ```bash
+   tox
+   ```
 
 ## API Reference
 
