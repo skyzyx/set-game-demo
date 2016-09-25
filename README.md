@@ -16,7 +16,7 @@
 [![License](https://img.shields.io/github/license/skyzyx/set-game-demo.svg?style=flat-square)](https://github.com/skyzyx/set-game-demo/blob/master/LICENSE.rst)
 [![Author](http://img.shields.io/badge/author-@skyzyx-blue.svg?style=flat-square)](https://github.com/skyzyx)
 
-"Set" is a card game where a group of players try to identify a "set" of cards from those placed face-up on a table.
+"Set" is a card game where a group of players try to identify a _Set_ of cards from those placed face-up on a table.
 
 This project uses [Semantic Versioning](http://semver.org) for managing backwards-compatibility.
 
@@ -35,32 +35,38 @@ This project uses [Semantic Versioning](http://semver.org) for managing backward
 
 ### Game Rules
 
-Each card has an image on it with 4 orthogonal attributes:
+Each _Card_ has an image on it with 4 orthogonal attributes:
 
 * Color (red, green, or purple)
 * Shape (diamond, squiggle, or oval)
 * Shading (solid, empty, or striped)
 * Number (one, two, or three)
 
-Three cards are a part of a set if, for each property, the values are all the same or all different.
+Three _Cards_ are a part of a _Set_ if, for each property, the values are all the same or all different.
 
 For example:
 
-* The cards "two red solid squiggles", "one green solid diamond", "three purple solid ovals" would make up a set. (number, shape, and color are different, shading is the same)
-* The cards "two red solid squiggles", "one green solid squiggles", "three purple solid ovals" would not make up a set, because shape is the same on two cards, but different on the third.
-* A game of Set starts by dealing 12 cards, face-up. When a player sees three cards that make up a set, they yell "Set!" and grab the cards. New cards are dealt from the deck to replace them.
-* If no player can find a set, three more cards are dealt (to make 15, then 18, then 21…)
-* The game is over when there are no cards left in the deck, and no sets left on the table. The player with the most sets wins.
+* The _Cards_ "two red solid squiggles", "one green solid diamond", "three purple solid ovals" would make up a
+  _Set_. (number, shape, and color are different, shading is the same)
+* The _Cards_ "two red solid squiggles", "one green solid squiggles", "three purple solid ovals" would not make up a
+  _Set_, because shape is the same on two _Cards_, but different on the third.
+* A _Game_ of "Set" starts by dealing 12 _Cards_, face-up. When a player sees three _Cards_ that make up a _Set_,
+  they yell "Set!" and grab the _Cards_. New _Cards_ are dealt from the _Deck_ to replace them.
+* If no player can find a _Set_, three more _Cards_ are dealt (to make 15, then 18, then 21...)
+* The _Game_ is over when there are no _Cards_ left in the _Deck_, and no _Sets_ left on the table. The player with
+  the most _Sets_ wins.
 
-### Game Requirements
+  ### Game Requirements
 
-Your task is to model the game in code, and implement the following methods:
+Your task is to model the _Game_ in code, and implement the following methods:
 
-* A method that takes three cards, and determines whether the three cards make a set
-* A method that given a "board" of cards, will either find a set, or determine if there are no sets on the table
-* A method that will play an entire game of Set, from beginning to end, and return a list of each valid sets you removed from the board.
+* A method that takes three _Cards_, and determines whether the three _Cards_ make a _Set_.
+* A method that given a _Board_ of _Cards_, will either find a _Set_, or determine that there are no _Sets_ on the
+  table.
+* A method that will play an entire _Game_ of "Set", from beginning to end, and return a list of each valid _Sets_
+  you removed from the _Board_.
 
-For this last method, there will be multiple correct solutions, but any valid list of sets is fine.
+For this last method, there will be multiple correct solutions, but any valid list of _Sets_ is fine.
 
 ### Assumptions
 
@@ -80,9 +86,15 @@ This is phrased ambiguously, and the examples given lead me to believe that the 
 
 ### Logic
 
-1. Create the deck of available cards by ensuring that every card is unique, and that all combinations of properties are represented. Also, shuffle the deck by default.
-1. Deal 12 cards to the board.
+(Whereas “_Combination_” refers to the [mathematical concept](https://en.wikipedia.org/wiki/Combination).)
 
+1. Create the deck of available cards by ensuring that every card is unique, and that all _Combinations_ of properties are represented. Also, shuffle the deck by default.
+1. Deal 12 cards to the _Board_.
+1. Calculate all possible _Combinations_ of the 12 cards, in groups of 3.
+1. Linearly iterate through each _Combination_, applying logic to determine whether or not this _Combination_ represents a _Set_.
+1. Collect the _Sets_ by removing the _Cards_ which are determined to be part of a _Set_.
+1. When no more _Sets_ can be found, deal another 3 _Cards_ from the _Deck_.
+1. Repeat steps 3–6 until the _Deck_ is empty.
 
 ## Requirements
 
