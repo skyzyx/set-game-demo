@@ -42,7 +42,7 @@ Each _Card_ has an image on it with 4 orthogonal attributes:
 * Shading (solid, empty, or striped)
 * Number (one, two, or three)
 
-Three _Cards_ are a part of a _Set_ if, for each property, the values are all the same or all different.
+Three _Cards_ are a part of a _Set_ if, for each _Property_, the values are all the same or all different.
 
 For example:
 
@@ -56,7 +56,7 @@ For example:
 * The _Game_ is over when there are no _Cards_ left in the _Deck_, and no _Sets_ left on the table. The player with
   the most _Sets_ wins.
 
-  ### Game Requirements
+### Game Requirements
 
 Your task is to model the _Game_ in code, and implement the following methods:
 
@@ -72,7 +72,7 @@ For this last method, there will be multiple correct solutions, but any valid li
 
 > _“Three cards are a part of a set if, for each property, the values are all the same or all different.”_
 
-This is phrased ambiguously, and the examples given lead me to believe that the following is a better description of the rules.
+This is phrased ambiguously, and the examples given lead me to believe that the following is a more specific description of the rules.
 
 * Take 3 cards and look at each of their properties one-by-one.
 * If all cards have a different value for that property OR all cards have the same value for that property, then it _may_ be a set.
