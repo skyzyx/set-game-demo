@@ -90,8 +90,8 @@ This is phrased ambiguously, and the examples given lead me to believe that the 
 
 1. Create the deck of available cards by ensuring that every card is unique, and that all _Combinations_ of properties are represented. Also, shuffle the deck by default.
 1. Deal 12 cards to the _Board_.
-1. Calculate all possible _Combinations_ of the 12 cards, in groups of 3.
-1. Linearly iterate through each _Combination_, applying logic to determine whether or not this _Combination_ represents a _Set_.
+1. Calculate all possible _Combinations_ of the cards on the _Board_, in groups of 3.
+1. Iterate over each _Combination_, applying logic to determine whether or not this _Combination_ represents a _Set_.
 1. Collect the _Sets_ by removing the _Cards_ which are determined to be part of a _Set_.
 1. When no more _Sets_ can be found, deal another 3 _Cards_ from the _Deck_.
 1. Repeat steps 3–6 until the _Deck_ is empty.
