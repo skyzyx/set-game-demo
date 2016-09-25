@@ -19,7 +19,7 @@ test:
 
 .PHONY: docs
 docs:
-	pdoc --html --html-dir docs --overwrite --all-submodules --external-links skyzyx/set_game_demo
+	pdoc --html --html-dir docs --overwrite --all-submodules --external-links set_game_demo
 
 .PHONY: pushdocs
 pushdocs: docs
