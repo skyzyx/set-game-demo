@@ -101,7 +101,7 @@ This is phrased ambiguously, and the examples given lead me to believe that the 
 * Python 2.7, 3.3+, Pypy
 * Pip
 * VirtualEnv is recommended, but not required
-* [Chag]
+
 
 ## Installation
 
@@ -263,7 +263,7 @@ To begin…
 
 ```bash
 make docs
-open docs/set/index.html
+open docs/set_game_demo/index.html
 ```
 
 ### Building and pushing docs
@@ -291,14 +291,12 @@ Running `make` by itself will show you a list of available sub-commands.
 ```bash
 $ make
 all
-build
+buildpip
 clean
 docs
-install
-install-python
 lint
-push
 pushdocs
+pushpip
 readme
 tag
 test

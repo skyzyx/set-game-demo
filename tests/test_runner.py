@@ -13,7 +13,6 @@ from __future__ import print_function
 import unittest
 import nose2
 from set_game_demo import SetGame
-from set_game_demo import SimpleNamespace
 
 class Test(unittest.TestCase):
     """Unit tests for the set_game_demo.SetGame class."""
@@ -118,209 +117,209 @@ class Test(unittest.TestCase):
     # Set-detection
 
     def test_is_a_set1(self):
-        card1 = SimpleNamespace()
-        card2 = SimpleNamespace()
-        card3 = SimpleNamespace()
+        card1 = {}
+        card2 = {}
+        card3 = {}
 
-        card1.color = "red"
-        card2.color = "red"
-        card3.color = "red"
+        card1["color"] = "red"
+        card2["color"] = "red"
+        card3["color"] = "red"
 
-        card1.shape = "diamond"
-        card2.shape = "diamond"
-        card3.shape = "diamond"
+        card1["shape"] = "diamond"
+        card2["shape"] = "diamond"
+        card3["shape"] = "diamond"
 
-        card1.shading = "solid"
-        card2.shading = "solid"
-        card3.shading = "solid"
+        card1["shading"] = "solid"
+        card2["shading"] = "solid"
+        card3["shading"] = "solid"
 
-        card1.number = "one"
-        card2.number = "one"
-        card3.number = "one"
+        card1["number"] = "one"
+        card2["number"] = "one"
+        card3["number"] = "one"
 
         self.assertTrue(self.game.is_a_set(card1, card2, card3))
 
     def test_is_a_set2(self):
-        card1 = SimpleNamespace()
-        card2 = SimpleNamespace()
-        card3 = SimpleNamespace()
+        card1 = {}
+        card2 = {}
+        card3 = {}
 
-        card1.color = "red"
-        card2.color = "green"
-        card3.color = "purple"
+        card1["color"] = "red"
+        card2["color"] = "green"
+        card3["color"] = "purple"
 
-        card1.shape = "diamond"
-        card2.shape = "diamond"
-        card3.shape = "diamond"
+        card1["shape"] = "diamond"
+        card2["shape"] = "diamond"
+        card3["shape"] = "diamond"
 
-        card1.shading = "solid"
-        card2.shading = "solid"
-        card3.shading = "solid"
+        card1["shading"] = "solid"
+        card2["shading"] = "solid"
+        card3["shading"] = "solid"
 
-        card1.number = "one"
-        card2.number = "one"
-        card3.number = "one"
+        card1["number"] = "one"
+        card2["number"] = "one"
+        card3["number"] = "one"
 
         self.assertTrue(self.game.is_a_set(card1, card2, card3))
 
     def test_is_a_set3(self):
-        card1 = SimpleNamespace()
-        card2 = SimpleNamespace()
-        card3 = SimpleNamespace()
+        card1 = {}
+        card2 = {}
+        card3 = {}
 
-        card1.color = "red"
-        card2.color = "green"
-        card3.color = "purple"
+        card1["color"] = "red"
+        card2["color"] = "green"
+        card3["color"] = "purple"
 
-        card1.shape = "diamond"
-        card2.shape = "squiggle"
-        card3.shape = "oval"
+        card1["shape"] = "diamond"
+        card2["shape"] = "squiggle"
+        card3["shape"] = "oval"
 
-        card1.shading = "solid"
-        card2.shading = "solid"
-        card3.shading = "solid"
+        card1["shading"] = "solid"
+        card2["shading"] = "solid"
+        card3["shading"] = "solid"
 
-        card1.number = "one"
-        card2.number = "one"
-        card3.number = "one"
+        card1["number"] = "one"
+        card2["number"] = "one"
+        card3["number"] = "one"
 
         self.assertTrue(self.game.is_a_set(card1, card2, card3))
 
     def test_is_a_set4(self):
-        card1 = SimpleNamespace()
-        card2 = SimpleNamespace()
-        card3 = SimpleNamespace()
+        card1 = {}
+        card2 = {}
+        card3 = {}
 
-        card1.color = "red"
-        card2.color = "green"
-        card3.color = "purple"
+        card1["color"] = "red"
+        card2["color"] = "green"
+        card3["color"] = "purple"
 
-        card1.shape = "diamond"
-        card2.shape = "squiggle"
-        card3.shape = "oval"
+        card1["shape"] = "diamond"
+        card2["shape"] = "squiggle"
+        card3["shape"] = "oval"
 
-        card1.shading = "solid"
-        card2.shading = "empty"
-        card3.shading = "striped"
+        card1["shading"] = "solid"
+        card2["shading"] = "empty"
+        card3["shading"] = "striped"
 
-        card1.number = "one"
-        card2.number = "one"
-        card3.number = "one"
+        card1["number"] = "one"
+        card2["number"] = "one"
+        card3["number"] = "one"
 
         self.assertTrue(self.game.is_a_set(card1, card2, card3))
 
     def test_is_a_set5(self):
-        card1 = SimpleNamespace()
-        card2 = SimpleNamespace()
-        card3 = SimpleNamespace()
+        card1 = {}
+        card2 = {}
+        card3 = {}
 
-        card1.color = "red"
-        card2.color = "green"
-        card3.color = "purple"
+        card1["color"] = "red"
+        card2["color"] = "green"
+        card3["color"] = "purple"
 
-        card1.shape = "diamond"
-        card2.shape = "squiggle"
-        card3.shape = "oval"
+        card1["shape"] = "diamond"
+        card2["shape"] = "squiggle"
+        card3["shape"] = "oval"
 
-        card1.shading = "solid"
-        card2.shading = "empty"
-        card3.shading = "striped"
+        card1["shading"] = "solid"
+        card2["shading"] = "empty"
+        card3["shading"] = "striped"
 
-        card1.number = "one"
-        card2.number = "two"
-        card3.number = "three"
+        card1["number"] = "one"
+        card2["number"] = "two"
+        card3["number"] = "three"
 
         self.assertTrue(self.game.is_a_set(card1, card2, card3))
 
     def test_is_not_a_set1(self):
-        card1 = SimpleNamespace()
-        card2 = SimpleNamespace()
-        card3 = SimpleNamespace()
+        card1 = {}
+        card2 = {}
+        card3 = {}
 
-        card1.color = "red"
-        card2.color = "red"
-        card3.color = "purple"
+        card1["color"] = "red"
+        card2["color"] = "red"
+        card3["color"] = "purple"
 
-        card1.shape = "diamond"
-        card2.shape = "squiggle"
-        card3.shape = "oval"
+        card1["shape"] = "diamond"
+        card2["shape"] = "squiggle"
+        card3["shape"] = "oval"
 
-        card1.shading = "solid"
-        card2.shading = "empty"
-        card3.shading = "striped"
+        card1["shading"] = "solid"
+        card2["shading"] = "empty"
+        card3["shading"] = "striped"
 
-        card1.number = "one"
-        card2.number = "two"
-        card3.number = "three"
+        card1["number"] = "one"
+        card2["number"] = "two"
+        card3["number"] = "three"
 
         self.assertFalse(self.game.is_a_set(card1, card2, card3))
 
     def test_is_not_a_set2(self):
-        card1 = SimpleNamespace()
-        card2 = SimpleNamespace()
-        card3 = SimpleNamespace()
+        card1 = {}
+        card2 = {}
+        card3 = {}
 
-        card1.color = "red"
-        card2.color = "red"
-        card3.color = "red"
+        card1["color"] = "red"
+        card2["color"] = "red"
+        card3["color"] = "red"
 
-        card1.shape = "diamond"
-        card2.shape = "diamond"
-        card3.shape = "squiggle"
+        card1["shape"] = "diamond"
+        card2["shape"] = "diamond"
+        card3["shape"] = "squiggle"
 
-        card1.shading = "solid"
-        card2.shading = "empty"
-        card3.shading = "striped"
+        card1["shading"] = "solid"
+        card2["shading"] = "empty"
+        card3["shading"] = "striped"
 
-        card1.number = "one"
-        card2.number = "two"
-        card3.number = "three"
+        card1["number"] = "one"
+        card2["number"] = "two"
+        card3["number"] = "three"
 
         self.assertFalse(self.game.is_a_set(card1, card2, card3))
 
     def test_is_not_a_set3(self):
-        card1 = SimpleNamespace()
-        card2 = SimpleNamespace()
-        card3 = SimpleNamespace()
+        card1 = {}
+        card2 = {}
+        card3 = {}
 
-        card1.color = "red"
-        card2.color = "red"
-        card3.color = "red"
+        card1["color"] = "red"
+        card2["color"] = "red"
+        card3["color"] = "red"
 
-        card1.shape = "diamond"
-        card2.shape = "diamond"
-        card3.shape = "diamond"
+        card1["shape"] = "diamond"
+        card2["shape"] = "diamond"
+        card3["shape"] = "diamond"
 
-        card1.shading = "solid"
-        card2.shading = "solid"
-        card3.shading = "empty"
+        card1["shading"] = "solid"
+        card2["shading"] = "solid"
+        card3["shading"] = "empty"
 
-        card1.number = "one"
-        card2.number = "two"
-        card3.number = "three"
+        card1["number"] = "one"
+        card2["number"] = "two"
+        card3["number"] = "three"
 
         self.assertFalse(self.game.is_a_set(card1, card2, card3))
 
     def test_is_not_a_set4(self):
-        card1 = SimpleNamespace()
-        card2 = SimpleNamespace()
-        card3 = SimpleNamespace()
+        card1 = {}
+        card2 = {}
+        card3 = {}
 
-        card1.color = "red"
-        card2.color = "red"
-        card3.color = "red"
+        card1["color"] = "red"
+        card2["color"] = "red"
+        card3["color"] = "red"
 
-        card1.shape = "diamond"
-        card2.shape = "diamond"
-        card3.shape = "diamond"
+        card1["shape"] = "diamond"
+        card2["shape"] = "diamond"
+        card3["shape"] = "diamond"
 
-        card1.shading = "solid"
-        card2.shading = "solid"
-        card3.shading = "solid"
+        card1["shading"] = "solid"
+        card2["shading"] = "solid"
+        card3["shading"] = "solid"
 
-        card1.number = "one"
-        card2.number = "one"
-        card3.number = "three"
+        card1["number"] = "one"
+        card2["number"] = "one"
+        card3["number"] = "three"
 
         self.assertFalse(self.game.is_a_set(card1, card2, card3))
 
@@ -330,46 +329,46 @@ class Test(unittest.TestCase):
     def test_find_sets(self):
 
         # Cards which are a Set.
-        card1 = SimpleNamespace()
-        card2 = SimpleNamespace()
-        card3 = SimpleNamespace()
+        card1 = {}
+        card2 = {}
+        card3 = {}
 
-        card1.color = "red"
-        card2.color = "green"
-        card3.color = "purple"
+        card1["color"] = "red"
+        card2["color"] = "green"
+        card3["color"] = "purple"
 
-        card1.shape = "diamond"
-        card2.shape = "squiggle"
-        card3.shape = "oval"
+        card1["shape"] = "diamond"
+        card2["shape"] = "squiggle"
+        card3["shape"] = "oval"
 
-        card1.shading = "solid"
-        card2.shading = "empty"
-        card3.shading = "striped"
+        card1["shading"] = "solid"
+        card2["shading"] = "empty"
+        card3["shading"] = "striped"
 
-        card1.number = "one"
-        card2.number = "two"
-        card3.number = "three"
+        card1["number"] = "one"
+        card2["number"] = "two"
+        card3["number"] = "three"
 
         # Cards which are NOT a Set.
-        card4 = SimpleNamespace()
-        card5 = SimpleNamespace()
-        card6 = SimpleNamespace()
+        card4 = {}
+        card5 = {}
+        card6 = {}
 
-        card4.color = "red"
-        card5.color = "red"
-        card6.color = "red"
+        card4["color"] = "red"
+        card5["color"] = "red"
+        card6["color"] = "red"
 
-        card4.shape = "diamond"
-        card5.shape = "diamond"
-        card6.shape = "diamond"
+        card4["shape"] = "diamond"
+        card5["shape"] = "diamond"
+        card6["shape"] = "diamond"
 
-        card4.shading = "solid"
-        card5.shading = "solid"
-        card6.shading = "solid"
+        card4["shading"] = "solid"
+        card5["shading"] = "solid"
+        card6["shading"] = "solid"
 
-        card4.number = "one"
-        card5.number = "one"
-        card6.number = "three"
+        card4["number"] = "one"
+        card5["number"] = "one"
+        card6["number"] = "three"
 
         # Find the Sets.
         board = [card4, card5, card6, card1, card2, card3]

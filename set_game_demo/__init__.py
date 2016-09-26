@@ -91,11 +91,12 @@ class SetGame(object):
             for shape in self.shapes:
                 for shading in self.shadings:
                     for number in self.numbers:
-                        card = SimpleNamespace()
-                        card.color = color
-                        card.shape = shape
-                        card.shading = shading
-                        card.number = number
+                        card = {}
+                        card["color"] = color
+                        card["shape"] = shape
+                        card["shading"] = shading
+                        card["number"] = number
+
                         deck.append(card)
 
         random.shuffle(deck)
@@ -149,7 +150,7 @@ class SetGame(object):
             print()
             sets = self.find_sets(self.board)
             print("Discovered {quantity}.".format(
-                quantity=SetGame.plural(len(sets), 'set', 'sets')
+                quantity=SetGame.plural(len(sets), "set", "sets")
             ))
 
             for i, sset in enumerate(sets):
@@ -159,7 +160,7 @@ class SetGame(object):
 
             print()
             print("These are the remaining {quantity} on the board.".format(
-                quantity=SetGame.plural(len(self.board), 'card', 'cards')
+                quantity=SetGame.plural(len(self.board), "card", "cards")
             ))
             SetGame.display_cards(self.board)
             print()
@@ -170,7 +171,7 @@ class SetGame(object):
             print()
             self.board += self.deal(3)
             print("Dealing 3 more cards. You now have {quantity} on the board.".format(
-                quantity=SetGame.plural(len(self.board), 'card', 'cards')
+                quantity=SetGame.plural(len(self.board), "card", "cards")
             ))
             SetGame.display_cards(self.board)
             print()
@@ -183,7 +184,7 @@ class SetGame(object):
         print()
         sets = self.find_sets(self.board)
         print("Discovered {quantity}.".format(
-            quantity=SetGame.plural(len(sets), 'set', 'sets')
+            quantity=SetGame.plural(len(sets), "set", "sets")
         ))
 
         for i, sset in enumerate(sets):
@@ -193,7 +194,7 @@ class SetGame(object):
 
         print()
         print("These are the remaining {quantity} on the board.".format(
-            quantity=SetGame.plural(len(self.board), 'card', 'cards')
+            quantity=SetGame.plural(len(self.board), "card", "cards")
         ))
         SetGame.display_cards(self.board)
         print()
@@ -205,7 +206,7 @@ class SetGame(object):
         print("There are no more cards left in the deck.")
         print()
         print("These are the {} that are left on the table.".format(
-            SetGame.plural(len(self.board), 'card', 'cards')
+            SetGame.plural(len(self.board), "card", "cards")
         ))
         SetGame.display_cards(self.board)
         print()
@@ -214,7 +215,7 @@ class SetGame(object):
         # Final score.
         print()
         print("You discovered {quantity}.".format(
-            quantity=SetGame.plural(len(self.sets), 'set', 'sets')
+            quantity=SetGame.plural(len(self.sets), "set", "sets")
         ))
 
         for i, sset in enumerate(self.sets):
@@ -257,10 +258,10 @@ class SetGame(object):
         `return (void)`
         """
 
-        table = PrettyTable(['Number', 'Color', 'Shape', 'Shading'])
+        table = PrettyTable(["Number", "Color", "Shape", "Shading"])
 
         for card in cards:
-            table.add_row([card.number, card.color, card.shape, card.shading])
+            table.add_row([card["number"], card["color"], card["shape"], card["shading"]])
 
         print(table)
 
@@ -281,15 +282,15 @@ class SetGame(object):
 
         for attribute in ["color", "shape", "shading", "number"]:
             if (SetGame.__all_unique([
-                    getattr(card1, attribute),
-                    getattr(card2, attribute),
-                    getattr(card3, attribute),
+                    card1[attribute],
+                    card2[attribute],
+                    card3[attribute],
                 ]) is False
                     and
                     SetGame.__all_same([
-                        getattr(card1, attribute),
-                        getattr(card2, attribute),
-                        getattr(card3, attribute),
+                        card1[attribute],
+                        card2[attribute],
+                        card3[attribute],
                     ]) is False):
 
                 return False
@@ -378,7 +379,7 @@ class SetGame(object):
     @staticmethod
     def plural(count, singular, plural):
         """
-        Determines whether or not a `List` of values are all identical.
+        Determines whether a response should be singular or plural, depending on the number of items being referenced.
 
         `count (integer)`: The number of items to adjust language for.
 
@@ -400,36 +401,6 @@ class SetGame(object):
 # ------------------------------------------------------------------------------
 
 
-class SimpleNamespace(object):  # pragma: no cover
-    """
-    Python doesn't have the same concept as "objects" or "hashes" like Ruby, PHP, JavaScript, Java, and other
-    languages do. The closest thing we have is a `dict`, but it doesn't quite behave the same way.
-
-    Backported from Python 3.3+.
-
-    Small performance penalty for using this in Python 3.3+ because the original implementation was written in C. We
-    will trade a small bit of performance for convenience in version 1, and flag this as a known issue to resolve in a
-    future version.
-
-    This class is made available under the terms of the Creative Common Attribution-ShareAlike 4.0 International
-    (CC BY-SA 4.0) license. http://j.mp/2cvyuop
-    """
-    # pylint: disable=R0903
-
-    def __init__(self, **kwargs):
-        self.__dict__.update(kwargs)
-
-    def __repr__(self):
-        keys = sorted(self.__dict__)
-        items = ("{}={!r}".format(k, self.__dict__[k]) for k in keys)
-        return "{}({})".format(type(self).__name__, ", ".join(items))
-
-    def __eq__(self, other):
-        return self.__dict__ == other.__dict__
-
-# ------------------------------------------------------------------------------
-
-
 def main():  # pragma: no cover
     """
     This function is run when the script is executed from the command-line.
@@ -442,8 +413,8 @@ def main():  # pragma: no cover
 
     parser.add_argument(
         "-q", "--quiet",
-        dest='quiet',
-        action='store_true',
+        dest="quiet",
+        action="store_true",
         help="By default, the game will play in chatty, interactive mode. "
         "This will enable a quieter, results-only mode.")
 
@@ -454,7 +425,7 @@ def main():  # pragma: no cover
     if flags.quiet:
         discovered, sets = game.play_quiet()
         print("You discovered {quantity}.".format(
-            quantity=SetGame.plural(len(discovered), 'set', 'sets')
+            quantity=SetGame.plural(discovered, "set", "sets")
         ))
 
         for i, sset in enumerate(sets):
