@@ -1,4 +1,4 @@
-include CHANGELOG.rst
+include CHANGELOG.md
 include README.rst
 include LICENSE.rst
 include requirements.txt

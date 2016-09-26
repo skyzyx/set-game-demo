@@ -215,16 +215,24 @@ Development
 -  Install `VirtualEnv <https://virtualenv.pypa.io/en/stable/>`__ for
    your development environment, and *activate* the environment.
 
-``bash   pip install virtualenv   virtualenv .vendor   source .vendor/bin/activate``
+  .. code:: bash
+
+      pip install virtualenv
+      virtualenv .vendor
+      source .vendor/bin/activate
 
 -  Install the ``requirements.txt``.
 
-``bash   pip install -r requirements.txt``
+  .. code:: bash
+
+      pip install -r requirements.txt
 
 -  When you make changes, make sure that you run the linter and fix
    anything that's broken.
 
-``bash   make lint``
+  .. code:: bash
+
+      make lint
 
 Testing
 -------
@@ -253,24 +261,49 @@ To begin…
    the supported Python versions (listed above), feel free to manage
    them yourself.
 
-``bash    pyenv install 3.6.0b1 && \    pyenv install 3.5.2 && \    pyenv install 3.4.5 && \    pyenv install 3.3.6 && \    pyenv install 2.7.12 && \    pyenv install pypy-5.3.1 && \    pyenv install pypy3-2.4.0 && \    pyenv rehash && \    eval "$(pyenv init -)" && \    pyenv global system 3.6.0b1 3.5.2 3.4.5 3.3.6 2.7.12 pypy-5.3.1 pypy3-2.4.0``
+  .. code:: bash
+
+      pyenv install 3.6.0b1 && \
+      pyenv install 3.5.2 && \
+      pyenv install 3.4.5 && \
+      pyenv install 3.3.6 && \
+      pyenv install 2.7.12 && \
+      pyenv install pypy-5.3.1 && \
+      pyenv install pypy3-2.4.0 && \
+      pyenv rehash && \
+      eval "$(pyenv init -)" && \
+      pyenv global system 3.6.0b1 3.5.2 3.4.5 3.3.6 2.7.12 pypy-5.3.1 pypy3-2.4.0
 
 To verify that the installation and configuration were successful, you
 can run ``pyenv versions``. You should see a ``*`` character in front of
 every version that we just installed.
 
-``bash    $ pyenv versions    * system (set by ~/.pyenv/version)    * 2.7.12 (set by ~/.pyenv/version)    * 3.3.6 (set by ~/.pyenv/version)    * 3.4.5 (set by ~/.pyenv/version)    * 3.5.2 (set by ~/.pyenv/version)    * 3.6.0b1 (set by ~/.pyenv/version)    * pypy-5.3.1 (set by ~/.pyenv/version)    * pypy3-2.4.0 (set by ~/.pyenv/version)``
+  .. code:: bash
+
+      $ pyenv versions
+      * system (set by ~/.pyenv/version)
+      * 2.7.12 (set by ~/.pyenv/version)
+      * 3.3.6 (set by ~/.pyenv/version)
+      * 3.4.5 (set by ~/.pyenv/version)
+      * 3.5.2 (set by ~/.pyenv/version)
+      * 3.6.0b1 (set by ~/.pyenv/version)
+      * pypy-5.3.1 (set by ~/.pyenv/version)
+      * pypy3-2.4.0 (set by ~/.pyenv/version)
 
 #. The following command will package-up your module and install it
    locally, then run ``nose2`` to execute the tests in the *default
    system Python*.
 
-``bash    make test``
+  .. code:: bash
+
+      make test
 
 #. After you've run that, you can then execute the tests in all
    supported versions of Python with the following:
 
-``bash    tox``
+  .. code:: bash
+
+      tox
 
 API Reference
 -------------
