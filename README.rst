@@ -475,6 +475,6 @@ Licensed for use under the terms of the `Apache
 .. |Code Quality| image:: http://img.shields.io/scrutinizer/g/skyzyx/set-game-demo.svg?style=flat-square
    :target: https://scrutinizer-ci.com/g/skyzyx/set-game-demo
 .. |License| image:: https://img.shields.io/github/license/skyzyx/set-game-demo.svg?style=flat-square
-   :target: https://github.com/skyzyx/set-game-demo/blob/master/LICENSE.rst
+   :target: https://github.com/skyzyx/set-game-demo/blob/master/LICENSE.md
 .. |Author| image:: http://img.shields.io/badge/author-@skyzyx-blue.svg?style=flat-square
    :target: https://github.com/skyzyx

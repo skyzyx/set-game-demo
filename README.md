@@ -13,7 +13,7 @@
 [![Coverage Status](http://img.shields.io/coveralls/skyzyx/set-game-demo/master.svg?style=flat-square)](https://coveralls.io/r/skyzyx/set-game-demo?branch=master)
 [![Code Climate](http://img.shields.io/codeclimate/github/skyzyx/set-game-demo.svg?style=flat-square)](https://codeclimate.com/github/skyzyx/set-game-demo)
 [![Code Quality](http://img.shields.io/scrutinizer/g/skyzyx/set-game-demo.svg?style=flat-square)](https://scrutinizer-ci.com/g/skyzyx/set-game-demo)
-[![License](https://img.shields.io/github/license/skyzyx/set-game-demo.svg?style=flat-square)](https://github.com/skyzyx/set-game-demo/blob/master/LICENSE.rst)
+[![License](https://img.shields.io/github/license/skyzyx/set-game-demo.svg?style=flat-square)](https://github.com/skyzyx/set-game-demo/blob/master/LICENSE.md)
 [![Author](http://img.shields.io/badge/author-@skyzyx-blue.svg?style=flat-square)](https://github.com/skyzyx)
 
 "Set" is a card game where a group of players try to identify a _Set_ of cards from those placed face-up on a table.
