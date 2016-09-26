@@ -9,7 +9,7 @@ lint:
 	autopep8 --max-line-length 120 --in-place set_game_demo/*.py
 	autoflake --in-place --remove-unused-variables set_game_demo/*.py
 	pylint --rcfile .pylint set_game_demo/
-	pylint --rcfile .pylint tests/*.py --disable F0401,W0212,C0111,E1101
+	pylint --rcfile .pylint tests/*.py --disable F0401,W0212,C0111,E1101,R0904
 
 .PHONY: test
 test:

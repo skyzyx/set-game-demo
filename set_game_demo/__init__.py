@@ -120,7 +120,7 @@ class SetGame(object):
 
         return out
 
-    def play(self): # pragma: no cover
+    def play(self):  # pragma: no cover
         """
         Play a (chatty) game of Set.
 
@@ -149,7 +149,7 @@ class SetGame(object):
             print()
             sets = self.find_sets(self.board)
             print("Discovered {quantity}.".format(
-                quantity=SetGame._SetGame__plural(len(sets), 'set', 'sets')
+                quantity=SetGame.plural(len(sets), 'set', 'sets')
             ))
 
             for i, sset in enumerate(sets):
@@ -159,7 +159,7 @@ class SetGame(object):
 
             print()
             print("These are the remaining {quantity} on the board.".format(
-                quantity=SetGame._SetGame__plural(len(self.board), 'card', 'cards')
+                quantity=SetGame.plural(len(self.board), 'card', 'cards')
             ))
             SetGame.display_cards(self.board)
             print()
@@ -170,7 +170,7 @@ class SetGame(object):
             print()
             self.board += self.deal(3)
             print("Dealing 3 more cards. You now have {quantity} on the board.".format(
-                quantity=SetGame._SetGame__plural(len(self.board), 'card', 'cards')
+                quantity=SetGame.plural(len(self.board), 'card', 'cards')
             ))
             SetGame.display_cards(self.board)
             print()
@@ -183,7 +183,7 @@ class SetGame(object):
         print()
         sets = self.find_sets(self.board)
         print("Discovered {quantity}.".format(
-            quantity=SetGame._SetGame__plural(len(sets), 'set', 'sets')
+            quantity=SetGame.plural(len(sets), 'set', 'sets')
         ))
 
         for i, sset in enumerate(sets):
@@ -193,7 +193,7 @@ class SetGame(object):
 
         print()
         print("These are the remaining {quantity} on the board.".format(
-            quantity=SetGame._SetGame__plural(len(self.board), 'card', 'cards')
+            quantity=SetGame.plural(len(self.board), 'card', 'cards')
         ))
         SetGame.display_cards(self.board)
         print()
@@ -205,7 +205,7 @@ class SetGame(object):
         print("There are no more cards left in the deck.")
         print()
         print("These are the {} that are left on the table.".format(
-            SetGame._SetGame__plural(len(self.board), 'card', 'cards')
+            SetGame.plural(len(self.board), 'card', 'cards')
         ))
         SetGame.display_cards(self.board)
         print()
@@ -214,7 +214,7 @@ class SetGame(object):
         # Final score.
         print()
         print("You discovered {quantity}.".format(
-            quantity=SetGame._SetGame__plural(len(self.sets), 'set', 'sets')
+            quantity=SetGame.plural(len(self.sets), 'set', 'sets')
         ))
 
         for i, sset in enumerate(self.sets):
@@ -376,7 +376,7 @@ class SetGame(object):
         return len(set(arr)) == 1
 
     @staticmethod
-    def __plural(count, singular, plural):
+    def plural(count, singular, plural):
         """
         Determines whether or not a `List` of values are all identical.
 
@@ -400,7 +400,7 @@ class SetGame(object):
 # ------------------------------------------------------------------------------
 
 
-class SimpleNamespace(object): # pragma: no cover
+class SimpleNamespace(object):  # pragma: no cover
     """
     Python doesn't have the same concept as "objects" or "hashes" like Ruby, PHP, JavaScript, Java, and other
     languages do. The closest thing we have is a `dict`, but it doesn't quite behave the same way.
@@ -410,6 +410,9 @@ class SimpleNamespace(object): # pragma: no cover
     Small performance penalty for using this in Python 3.3+ because the original implementation was written in C. We
     will trade a small bit of performance for convenience in version 1, and flag this as a known issue to resolve in a
     future version.
+
+    This class is made available under the terms of the Creative Common Attribution-ShareAlike 4.0 International
+    (CC BY-SA 4.0) license. http://j.mp/2cvyuop
     """
     # pylint: disable=R0903
 
@@ -427,7 +430,10 @@ class SimpleNamespace(object): # pragma: no cover
 # ------------------------------------------------------------------------------
 
 
-def main(): # pragma: no cover
+def main():  # pragma: no cover
+    """
+    This function is run when the script is executed from the command-line.
+    """
 
     # Available CLI flags.
     parser = argparse.ArgumentParser(
@@ -438,7 +444,8 @@ def main(): # pragma: no cover
         "-q", "--quiet",
         dest='quiet',
         action='store_true',
-        help="By default, the game will play in chatty, interactive mode. This will enable a quieter, results-only mode.")
+        help="By default, the game will play in chatty, interactive mode. "
+        "This will enable a quieter, results-only mode.")
 
     parser.set_defaults(quiet=False)
     flags = parser.parse_args()
@@ -447,10 +454,10 @@ def main(): # pragma: no cover
     if flags.quiet:
         discovered, sets = game.play_quiet()
         print("You discovered {quantity}.".format(
-            quantity=SetGame._SetGame__plural(len(game.sets), 'set', 'sets')
+            quantity=SetGame.plural(len(discovered), 'set', 'sets')
         ))
 
-        for i, sset in enumerate(game.sets):
+        for i, sset in enumerate(sets):
             print()
             print("Set #{index}".format(index=(i + 1)))
             SetGame.display_cards(sset)
@@ -458,5 +465,5 @@ def main(): # pragma: no cover
     else:
         game.play()
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     main()

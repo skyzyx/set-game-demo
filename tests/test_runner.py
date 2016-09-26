@@ -110,9 +110,9 @@ class Test(unittest.TestCase):
         self.assertTrue(self.game._SetGame__all_same(["two", "two", "two"]))
 
     def test_plural(self):
-        self.assertEqual("0 things", self.game._SetGame__plural(0, "thing", "things"))
-        self.assertEqual("1 thing", self.game._SetGame__plural(1, "thing", "things"))
-        self.assertEqual("2 things", self.game._SetGame__plural(2, "thing", "things"))
+        self.assertEqual("0 things", self.game.plural(0, "thing", "things"))
+        self.assertEqual("1 thing", self.game.plural(1, "thing", "things"))
+        self.assertEqual("2 things", self.game.plural(2, "thing", "things"))
 
     # --------------------------------------------------------------------------
     # Set-detection
