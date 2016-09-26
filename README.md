@@ -1,4 +1,4 @@
-# Set
+# Demo of the game of "Set"
 
 [![Source](https://img.shields.io/badge/source-skyzyx/set–game–demo-blue.svg?style=flat-square)](https://github.com/skyzyx/set-game-demo)
 [![Downloads](https://img.shields.io/pypi/dm/skyzyx-set-game-demo.svg?style=flat-square)](https://github.com/skyzyx/set-game-demo/releases)

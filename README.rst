@@ -1,4 +1,4 @@
-Set
+Demo of the game of "Set"
 ===
 
 |Source| |Downloads| |Release| |Pypi Release| |Open Issues| |Build Status| |Implementation| |Python Versions| |Package Format| |Stability| |Coverage Status| |Code Climate| |Code Quality| |License| |Author|
