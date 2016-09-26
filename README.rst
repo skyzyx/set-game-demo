@@ -1,23 +1,9 @@
 Set
 ===
 
-| |Source|
-| @\ |Downloads|
-| |Release|
-| @\ |Pypi Release|
-| |Open Issues|
-| |Build Status|
-| @\ |Implementation|
-| @\ |Python Versions|
-| @\ |Package Format|
-| @\ |Stability|
-| |Coverage Status|
-| |Code Climate|
-| |Code Quality|
-| |License|
-| |Author|
+|Source| |Downloads| |Release| |Pypi Release| |Open Issues| |Build Status| |Implementation| |Python Versions| |Package Format| |Stability| |Coverage Status| |Code Climate| |Code Quality| |License| |Author|
 
-"Set" is a card game where a group of players try to identify a "set" of
+"Set" is a card game where a group of players try to identify a *Set* of
 cards from those placed face-up on a table.
 
 This project uses `Semantic Versioning <http://semver.org>`__ for
@@ -44,47 +30,52 @@ Core Concepts
 Game Rules
 ~~~~~~~~~~
 
-Each card has an image on it with 4 orthogonal attributes:
+Each *Card* has an image on it with 4 orthogonal attributes:
 
 -  Color (red, green, or purple)
 -  Shape (diamond, squiggle, or oval)
 -  Shading (solid, empty, or striped)
 -  Number (one, two, or three)
 
-Three cards are a part of a set if, for each property, the values are
-all the same or all different.
+Three *Cards* are a part of a *Set* if, for each *Property*, the values
+are all the same or all different.
 
 For example:
 
--  The cards "two red solid squiggles", "one green solid diamond",
-   "three purple solid ovals" would make up a set. (number, shape, and
-   color are different, shading is the same)
--  The cards "two red solid squiggles", "one green solid squiggles",
-   "three purple solid ovals" would not make up a set, because shape is
-   the same on two cards, but different on the third.
--  A game of Set starts by dealing 12 cards, face-up. When a player sees
-   three cards that make up a set, they yell "Set!" and grab the cards.
-   New cards are dealt from the deck to replace them.
--  If no player can find a set, three more cards are dealt (to make 15,
-   then 18, then 21…)
--  The game is over when there are no cards left in the deck, and no
-   sets left on the table. The player with the most sets wins.
+-  The *Cards* "two red solid squiggles", "one green solid diamond",
+   "three purple solid ovals" would make up a
+   *Set*. (number, shape, and color are different, shading is the same)
+-  The *Cards* "two red solid squiggles", "one green solid squiggles",
+   "three purple solid ovals" would not make up a
+   *Set*, because shape is the same on two *Cards*, but different on the
+   third.
+-  A *Game* of "Set" starts by dealing 12 *Cards*, face-up. When a
+   player sees three *Cards* that make up a *Set*,
+   they yell "Set!" and grab the *Cards*. New *Cards* are dealt from the
+   *Deck* to replace them.
+-  If no player can find a *Set*, three more *Cards* are dealt (to make
+   15, then 18, then 21...)
+-  The *Game* is over when there are no *Cards* left in the *Deck*, and
+   no *Sets* left on the table. The player with
+   the most *Sets* wins.
 
 Game Requirements
 ~~~~~~~~~~~~~~~~~
 
-Your task is to model the game in code, and implement the following
+Your task is to model the *Game* in code, and implement the following
 methods:
 
--  A method that takes three cards, and determines whether the three
-   cards make a set
--  A method that given a "board" of cards, will either find a set, or
-   determine if there are no sets on the table
--  A method that will play an entire game of Set, from beginning to end,
-   and return a list of each valid sets you removed from the board.
+-  A method that takes three *Cards*, and determines whether the three
+   *Cards* make a *Set*.
+-  A method that given a *Board* of *Cards*, will either find a *Set*,
+   or determine that there are no *Sets* on the
+   table.
+-  A method that will play an entire *Game* of "Set", from beginning to
+   end, and return a list of each valid *Sets*
+   you removed from the *Board*.
 
 For this last method, there will be multiple correct solutions, but any
-valid list of sets is fine.
+valid list of *Sets* is fine.
 
 Assumptions
 ~~~~~~~~~~~
@@ -93,7 +84,7 @@ Assumptions
     are all the same or all different.”*
 
 This is phrased ambiguously, and the examples given lead me to believe
-that the following is a better description of the rules.
+that the following is a more specific description of the rules.
 
 -  Take 3 cards and look at each of their properties one-by-one.
 -  If all cards have a different value for that property OR all cards
@@ -112,10 +103,22 @@ Problem Parameters
 Logic
 ~~~~~
 
+(Whereas “\ *Combination*\ ” refers to the `mathematical
+concept <https://en.wikipedia.org/wiki/Combination>`__.)
+
 #. Create the deck of available cards by ensuring that every card is
-   unique, and that all combinations of properties are represented.
+   unique, and that all *Combinations* of properties are represented.
    Also, shuffle the deck by default.
-#. Deal 12 cards to the board.
+#. Deal 12 cards to the *Board*.
+#. Calculate all possible *Combinations* of the cards on the *Board*, in
+   groups of 3.
+#. Iterate over each *Combination*, applying logic to determine whether
+   or not this *Combination* represents a *Set*.
+#. Collect the *Sets* by removing the *Cards* which are determined to be
+   part of a *Set*.
+#. When no more *Sets* can be found, deal another 3 *Cards* from the
+   *Deck*.
+#. Repeat steps 3–6 until the *Deck* is empty.
 
 Requirements
 ------------
@@ -123,14 +126,17 @@ Requirements
 -  Python 2.7, 3.3+, Pypy
 -  Pip
 -  VirtualEnv is recommended, but not required
--  `Chag <https://github.com/mtdowling/chag>`__
 
 Installation
 ------------
 
 .. code:: bash
 
+    # Install from Pypi
     pip install skyzyx-set-game-demo
+
+    # Install from local code
+    pip install -e .
 
 And either include it in your scripts:
 
@@ -148,12 +154,38 @@ And either include it in your scripts:
 Usage/Examples
 --------------
 
+From the Python REPL or a Python script…
+
+.. code:: python
+
+    from __future__ import print_function
+    from set_game_demo import SetGame
+
+    # Initialize the game.
+    game = SetGame()
+
+    # Chatty, interactive version of the game.
+    game.play()
+
+    # Quiet version of the game. Good for code.
+    discovered, sets = game.play_quiet()
+    print("Sets discovered: {}".format(discovered))
+    for set in sets:
+        game.display_cards(set)
+
+From the Terminal…
+
+.. code:: bash
+
+    # Chatty, interactive version of the game.
+    set-game-demo
+
+    # Quiet version of the game.
+    set-game-demo --quiet
+
 Known Issues
 ------------
 
--  This uses an implementation of ``SimpleNamespace`` that is written in
-   Python instead of C, which is slower than the native
-   ``SimpleNamespace`` class, but has compatibility with Python 2.7.
 -  In a final release, it would be wise to update the
    ``requirements.txt`` to allow for ranges of known-good versions
    instead of locking to one specific version.
@@ -165,12 +197,12 @@ Known Issues
 Future Improvements
 -------------------
 
--  Update ``SimpleNamespace`` to leverage the ``six`` module for passing
-   the C version of the class to Python 3.3+.
 -  Update the ``test_deal`` unit test to verify that we do not attempt
    to deal a larger number of cards than the deck contains (couldn't
    quite figure out the right way to call ``assertRaises()`` from the
    ``unittest`` package through the ``nose2`` interface).
+-  Support multiple *Players* who can collect sets and compete for
+   scores.
 
 Development
 -----------
@@ -249,7 +281,7 @@ Building local docs
 .. code:: bash
 
     make docs
-    open docs/set/index.html
+    open docs/set_game_demo/index.html
 
 Building and pushing docs
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -285,14 +317,12 @@ sub-commands.
 
     $ make
     all
-    build
+    buildpip
     clean
     docs
-    install
-    install-python
     lint
-    push
     pushdocs
+    pushpip
     readme
     tag
     test
@@ -387,24 +417,24 @@ Licensed for use under the terms of the `Apache
 
 .. |Source| image:: http://img.shields.io/badge/source-skyzyx/set-game-demo-blue.svg?style=flat-square
    :target: https://github.com/skyzyx/set-game-demo
-.. |Downloads| image:: https://img.shields.io/pypi/dm/wepay-signer.svg?style=flat-square
+.. |Downloads| image:: https://img.shields.io/pypi/dm/skyzyx-set-game-demo.svg?style=flat-square
    :target: https://github.com/skyzyx/set-game-demo/releases
 .. |Release| image:: https://img.shields.io/github/release/skyzyx/set-game-demo.svg?style=flat-square
    :target: https://github.com/skyzyx/set-game-demo/releases
-.. |Pypi Release| image:: https://img.shields.io/pypi/v/wepay-signer.svg?style=flat-square
-   :target: https://pypi.python.org/pypi/wepay-signer
+.. |Pypi Release| image:: https://img.shields.io/pypi/v/skyzyx-set-game-demo.svg?style=flat-square
+   :target: https://pypi.python.org/pypi/skyzyx-set-game-demo
 .. |Open Issues| image:: http://img.shields.io/github/issues/skyzyx/set-game-demo.svg?style=flat-square
    :target: https://github.com/skyzyx/set-game-demo/issues
 .. |Build Status| image:: http://img.shields.io/travis/skyzyx/set-game-demo/master.svg?style=flat-square
    :target: https://travis-ci.org/skyzyx/set-game-demo
-.. |Implementation| image:: https://img.shields.io/pypi/implementation/wepay-signer.svg?style=flat-square
+.. |Implementation| image:: https://img.shields.io/pypi/implementation/skyzyx-set-game-demo.svg?style=flat-square
    :target: https://python.org
-.. |Python Versions| image:: https://img.shields.io/pypi/pyversions/wepay-signer.svg?style=flat-square
+.. |Python Versions| image:: https://img.shields.io/pypi/pyversions/skyzyx-set-game-demo.svg?style=flat-square
    :target: https://python.org
-.. |Package Format| image:: https://img.shields.io/pypi/format/wepay-signer.svg?style=flat-square
+.. |Package Format| image:: https://img.shields.io/pypi/format/skyzyx-set-game-demo.svg?style=flat-square
    :target: http://pythonwheels.com
-.. |Stability| image:: https://img.shields.io/pypi/status/wepay-signer.svg?style=flat-square
-   :target: https://pypi.python.org/pypi/wepay-signer
+.. |Stability| image:: https://img.shields.io/pypi/status/skyzyx-set-game-demo.svg?style=flat-square
+   :target: https://pypi.python.org/pypi/skyzyx-set-game-demo
 .. |Coverage Status| image:: http://img.shields.io/coveralls/skyzyx/set-game-demo/master.svg?style=flat-square
    :target: https://coveralls.io/r/skyzyx/set-game-demo?branch=master
 .. |Code Climate| image:: http://img.shields.io/codeclimate/github/skyzyx/set-game-demo.svg?style=flat-square
