@@ -424,7 +424,7 @@ Contributing
 
 Here's the process for contributing:
 
-#. Fork Signer to your GitHub account.
+#. Fork this project to your GitHub account.
 #. Clone your GitHub copy of the repository into your local workspace.
 #. Write code, fix bugs, and add tests with 100% code coverage.
 #. Commit your changes to your local workspace and push them up to your
