@@ -154,9 +154,7 @@ checks:
 build:
   tests:
     override:
-      - command:
-        - "pip install -r requirements.txt"
-        - 'nose2'
+      - command: "pip install -r requirements-travisci.txt && nose2"
         coverage:
           file: '.coverage'
           config_file: '.coveragerc'
