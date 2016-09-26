@@ -5,10 +5,11 @@ all:
 
 .PHONY: lint
 lint:
+	@# http://pylint-messages.wikidot.com/all-codes
 	autopep8 --max-line-length 120 --in-place set_game_demo/*.py
 	autoflake --in-place --remove-unused-variables set_game_demo/*.py
 	pylint --rcfile .pylint set_game_demo/
-	pylint --rcfile .pylint tests/*.py --disable F0401
+	pylint --rcfile .pylint tests/*.py --disable F0401,W0212,C0111,E1101
 
 .PHONY: test
 test:

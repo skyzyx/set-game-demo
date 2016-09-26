@@ -12,8 +12,6 @@ Copyright (c) 2016 [Ryan Parman](https://github.com/skyzyx).
 from __future__ import print_function
 import unittest
 import nose2
-import random
-from nose2.tools.such import helper
 from set_game_demo import SetGame
 from set_game_demo import SimpleNamespace
 
@@ -110,6 +108,11 @@ class Test(unittest.TestCase):
         self.assertTrue(self.set._SetGame__all_same(["squiggle", "squiggle", "squiggle"]))
         self.assertTrue(self.set._SetGame__all_same(["empty", "empty", "empty"]))
         self.assertTrue(self.set._SetGame__all_same(["two", "two", "two"]))
+
+    def test_plural(self):
+        self.assertEqual("0 things", self.set._SetGame__plural(0, "thing", "things"))
+        self.assertEqual("1 thing", self.set._SetGame__plural(1, "thing", "things"))
+        self.assertEqual("2 things", self.set._SetGame__plural(2, "thing", "things"))
 
     # --------------------------------------------------------------------------
     # Set-detection
@@ -320,6 +323,60 @@ class Test(unittest.TestCase):
         card3.number = "three"
 
         self.assertFalse(self.set.is_a_set(card1, card2, card3))
+
+    # --------------------------------------------------------------------------
+    # Finding sets
+
+    def test_find_sets(self):
+
+        # Cards which are a Set.
+        card1 = SimpleNamespace()
+        card2 = SimpleNamespace()
+        card3 = SimpleNamespace()
+
+        card1.color = "red"
+        card2.color = "green"
+        card3.color = "purple"
+
+        card1.shape = "diamond"
+        card2.shape = "squiggle"
+        card3.shape = "oval"
+
+        card1.shading = "solid"
+        card2.shading = "empty"
+        card3.shading = "striped"
+
+        card1.number = "one"
+        card2.number = "two"
+        card3.number = "three"
+
+        # Cards which are NOT a Set.
+        card4 = SimpleNamespace()
+        card5 = SimpleNamespace()
+        card6 = SimpleNamespace()
+
+        card4.color = "red"
+        card5.color = "red"
+        card6.color = "red"
+
+        card4.shape = "diamond"
+        card5.shape = "diamond"
+        card6.shape = "diamond"
+
+        card4.shading = "solid"
+        card5.shading = "solid"
+        card6.shading = "solid"
+
+        card4.number = "one"
+        card5.number = "one"
+        card6.number = "three"
+
+        # Find the Sets.
+        board = [card4, card5, card6, card1, card2, card3]
+        sets = SetGame.find_sets(board)
+
+        self.assertEqual(1, len(sets))  # Find 1 Set.
+        self.assertEqual(3, len(board)) # Number of cards remaining on the Board.
 
 # ------------------------------------------------------------------------------
 

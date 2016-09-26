@@ -106,7 +106,11 @@ This is phrased ambiguously, and the examples given lead me to believe that the 
 ## Installation
 
 ```bash
+# Install from Pypi
 pip install skyzyx-set-game-demo
+
+# Install from local code
+pip install -e .
 ```
 
 And either include it in your scripts:
@@ -124,6 +128,34 @@ set-game-demo -h
 
 ## Usage/Examples
 
+From the Python REPL or a Python script…
+
+```python
+from __future__ import print_function
+from set_game_demo import SetGame
+
+# Initialize the game.
+game = SetGame()
+
+# Chatty, interactive version of the game.
+game.play()
+
+# Quiet version of the game. Good for code.
+discovered, sets = game.play_quiet()
+print("Sets discovered: {}".format(discovered))
+for set in sets:
+    game.display_cards(set)
+```
+
+From the Terminal…
+
+```bash
+# Chatty, interactive version of the game.
+set-game-demo
+
+# Quiet version of the game.
+set-game-demo --quiet
+```
 
 ## Known Issues
 
