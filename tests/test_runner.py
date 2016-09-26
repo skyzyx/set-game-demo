@@ -20,99 +20,99 @@ class Test(unittest.TestCase):
 
     def setUp(self):
         """Instantiate the class."""
-        self.set = SetGame()
+        self.game = SetGame()
 
     # --------------------------------------------------------------------------
     # Properties
 
     def test_colors(self):
-        self.assertTrue("red" in self.set.colors)
-        self.assertTrue("green" in self.set.colors)
-        self.assertTrue("purple" in self.set.colors)
+        self.assertTrue("red" in self.game.colors)
+        self.assertTrue("green" in self.game.colors)
+        self.assertTrue("purple" in self.game.colors)
 
-        self.assertFalse("blue" in self.set.colors)
-        self.assertFalse("fuschia" in self.set.colors)
-        self.assertFalse("yellow" in self.set.colors)
+        self.assertFalse("blue" in self.game.colors)
+        self.assertFalse("fuschia" in self.game.colors)
+        self.assertFalse("yellow" in self.game.colors)
 
     def test_shapes(self):
-        self.assertTrue("diamond" in self.set.shapes)
-        self.assertTrue("squiggle" in self.set.shapes)
-        self.assertTrue("oval" in self.set.shapes)
+        self.assertTrue("diamond" in self.game.shapes)
+        self.assertTrue("squiggle" in self.game.shapes)
+        self.assertTrue("oval" in self.game.shapes)
 
-        self.assertFalse("hearts" in self.set.shapes)
-        self.assertFalse("clubs" in self.set.shapes)
-        self.assertFalse("spades" in self.set.shapes)
+        self.assertFalse("hearts" in self.game.shapes)
+        self.assertFalse("clubs" in self.game.shapes)
+        self.assertFalse("spades" in self.game.shapes)
 
     def test_shadings(self):
-        self.assertTrue("solid" in self.set.shadings)
-        self.assertTrue("empty" in self.set.shadings)
-        self.assertTrue("striped" in self.set.shadings)
+        self.assertTrue("solid" in self.game.shadings)
+        self.assertTrue("empty" in self.game.shadings)
+        self.assertTrue("striped" in self.game.shadings)
 
-        self.assertFalse("spotted" in self.set.shadings)
-        self.assertFalse("dotted" in self.set.shadings)
-        self.assertFalse("criss-cross" in self.set.shadings)
+        self.assertFalse("spotted" in self.game.shadings)
+        self.assertFalse("dotted" in self.game.shadings)
+        self.assertFalse("criss-cross" in self.game.shadings)
 
     def test_numbers(self):
-        self.assertTrue("one" in self.set.numbers)
-        self.assertTrue("two" in self.set.numbers)
-        self.assertTrue("three" in self.set.numbers)
+        self.assertTrue("one" in self.game.numbers)
+        self.assertTrue("two" in self.game.numbers)
+        self.assertTrue("three" in self.game.numbers)
 
-        self.assertFalse("pi" in self.set.numbers)
-        self.assertFalse("four" in self.set.numbers)
-        self.assertFalse("five" in self.set.numbers)
+        self.assertFalse("pi" in self.game.numbers)
+        self.assertFalse("four" in self.game.numbers)
+        self.assertFalse("five" in self.game.numbers)
 
     def test_deck(self):
-        self.assertEqual(81, len(self.set.deck)) # Should be 3^4 (not 4^3)
+        self.assertEqual(81, len(self.game.deck)) # Should be 3^4 (not 4^3)
 
     # --------------------------------------------------------------------------
     # Dealing
 
     def test_deal(self):
-        self.assertEqual(3, len(self.set.deal(3)))
-        self.assertEqual(6, len(self.set.deal(6)))
-        self.assertEqual(12, len(self.set.deal(12)))
-        self.assertEqual(12, len(self.set.deal()))
-        # helper.assertRaises(IndexError, self.set.deal(48)) # Not quite working. 81 - 3 - 6 - 12 - 12 = 48
+        self.assertEqual(3, len(self.game.deal(3)))
+        self.assertEqual(6, len(self.game.deal(6)))
+        self.assertEqual(12, len(self.game.deal(12)))
+        self.assertEqual(12, len(self.game.deal()))
+        # helper.assertRaises(IndexError, self.game.deal(48)) # Not quite working. 81 - 3 - 6 - 12 - 12 = 48
 
     # --------------------------------------------------------------------------
     # Utilities
 
     def test_all_unique(self):
-        self.assertTrue(self.set._SetGame__all_unique(["red", "green", "purple"]))
-        self.assertTrue(self.set._SetGame__all_unique(["diamond", "squiggle", "oval"]))
-        self.assertTrue(self.set._SetGame__all_unique(["solid", "empty", "striped"]))
-        self.assertTrue(self.set._SetGame__all_unique(["one", "two", "three"]))
+        self.assertTrue(self.game._SetGame__all_unique(["red", "green", "purple"]))
+        self.assertTrue(self.game._SetGame__all_unique(["diamond", "squiggle", "oval"]))
+        self.assertTrue(self.game._SetGame__all_unique(["solid", "empty", "striped"]))
+        self.assertTrue(self.game._SetGame__all_unique(["one", "two", "three"]))
 
-        self.assertFalse(self.set._SetGame__all_unique(["red", "green", "green"]))
-        self.assertFalse(self.set._SetGame__all_unique(["diamond", "squiggle", "squiggle"]))
-        self.assertFalse(self.set._SetGame__all_unique(["solid", "empty", "empty"]))
-        self.assertFalse(self.set._SetGame__all_unique(["one", "two", "two"]))
+        self.assertFalse(self.game._SetGame__all_unique(["red", "green", "green"]))
+        self.assertFalse(self.game._SetGame__all_unique(["diamond", "squiggle", "squiggle"]))
+        self.assertFalse(self.game._SetGame__all_unique(["solid", "empty", "empty"]))
+        self.assertFalse(self.game._SetGame__all_unique(["one", "two", "two"]))
 
-        self.assertFalse(self.set._SetGame__all_unique(["green", "green", "green"]))
-        self.assertFalse(self.set._SetGame__all_unique(["squiggle", "squiggle", "squiggle"]))
-        self.assertFalse(self.set._SetGame__all_unique(["empty", "empty", "empty"]))
-        self.assertFalse(self.set._SetGame__all_unique(["two", "two", "two"]))
+        self.assertFalse(self.game._SetGame__all_unique(["green", "green", "green"]))
+        self.assertFalse(self.game._SetGame__all_unique(["squiggle", "squiggle", "squiggle"]))
+        self.assertFalse(self.game._SetGame__all_unique(["empty", "empty", "empty"]))
+        self.assertFalse(self.game._SetGame__all_unique(["two", "two", "two"]))
 
     def test_all_same(self):
-        self.assertFalse(self.set._SetGame__all_same(["red", "green", "purple"]))
-        self.assertFalse(self.set._SetGame__all_same(["diamond", "squiggle", "oval"]))
-        self.assertFalse(self.set._SetGame__all_same(["solid", "empty", "striped"]))
-        self.assertFalse(self.set._SetGame__all_same(["one", "two", "three"]))
+        self.assertFalse(self.game._SetGame__all_same(["red", "green", "purple"]))
+        self.assertFalse(self.game._SetGame__all_same(["diamond", "squiggle", "oval"]))
+        self.assertFalse(self.game._SetGame__all_same(["solid", "empty", "striped"]))
+        self.assertFalse(self.game._SetGame__all_same(["one", "two", "three"]))
 
-        self.assertFalse(self.set._SetGame__all_same(["red", "green", "green"]))
-        self.assertFalse(self.set._SetGame__all_same(["diamond", "squiggle", "squiggle"]))
-        self.assertFalse(self.set._SetGame__all_same(["solid", "empty", "empty"]))
-        self.assertFalse(self.set._SetGame__all_same(["one", "two", "two"]))
+        self.assertFalse(self.game._SetGame__all_same(["red", "green", "green"]))
+        self.assertFalse(self.game._SetGame__all_same(["diamond", "squiggle", "squiggle"]))
+        self.assertFalse(self.game._SetGame__all_same(["solid", "empty", "empty"]))
+        self.assertFalse(self.game._SetGame__all_same(["one", "two", "two"]))
 
-        self.assertTrue(self.set._SetGame__all_same(["green", "green", "green"]))
-        self.assertTrue(self.set._SetGame__all_same(["squiggle", "squiggle", "squiggle"]))
-        self.assertTrue(self.set._SetGame__all_same(["empty", "empty", "empty"]))
-        self.assertTrue(self.set._SetGame__all_same(["two", "two", "two"]))
+        self.assertTrue(self.game._SetGame__all_same(["green", "green", "green"]))
+        self.assertTrue(self.game._SetGame__all_same(["squiggle", "squiggle", "squiggle"]))
+        self.assertTrue(self.game._SetGame__all_same(["empty", "empty", "empty"]))
+        self.assertTrue(self.game._SetGame__all_same(["two", "two", "two"]))
 
     def test_plural(self):
-        self.assertEqual("0 things", self.set._SetGame__plural(0, "thing", "things"))
-        self.assertEqual("1 thing", self.set._SetGame__plural(1, "thing", "things"))
-        self.assertEqual("2 things", self.set._SetGame__plural(2, "thing", "things"))
+        self.assertEqual("0 things", self.game._SetGame__plural(0, "thing", "things"))
+        self.assertEqual("1 thing", self.game._SetGame__plural(1, "thing", "things"))
+        self.assertEqual("2 things", self.game._SetGame__plural(2, "thing", "things"))
 
     # --------------------------------------------------------------------------
     # Set-detection
@@ -138,7 +138,7 @@ class Test(unittest.TestCase):
         card2.number = "one"
         card3.number = "one"
 
-        self.assertTrue(self.set.is_a_set(card1, card2, card3))
+        self.assertTrue(self.game.is_a_set(card1, card2, card3))
 
     def test_is_a_set2(self):
         card1 = SimpleNamespace()
@@ -161,7 +161,7 @@ class Test(unittest.TestCase):
         card2.number = "one"
         card3.number = "one"
 
-        self.assertTrue(self.set.is_a_set(card1, card2, card3))
+        self.assertTrue(self.game.is_a_set(card1, card2, card3))
 
     def test_is_a_set3(self):
         card1 = SimpleNamespace()
@@ -184,7 +184,7 @@ class Test(unittest.TestCase):
         card2.number = "one"
         card3.number = "one"
 
-        self.assertTrue(self.set.is_a_set(card1, card2, card3))
+        self.assertTrue(self.game.is_a_set(card1, card2, card3))
 
     def test_is_a_set4(self):
         card1 = SimpleNamespace()
@@ -207,7 +207,7 @@ class Test(unittest.TestCase):
         card2.number = "one"
         card3.number = "one"
 
-        self.assertTrue(self.set.is_a_set(card1, card2, card3))
+        self.assertTrue(self.game.is_a_set(card1, card2, card3))
 
     def test_is_a_set5(self):
         card1 = SimpleNamespace()
@@ -230,7 +230,7 @@ class Test(unittest.TestCase):
         card2.number = "two"
         card3.number = "three"
 
-        self.assertTrue(self.set.is_a_set(card1, card2, card3))
+        self.assertTrue(self.game.is_a_set(card1, card2, card3))
 
     def test_is_not_a_set1(self):
         card1 = SimpleNamespace()
@@ -253,7 +253,7 @@ class Test(unittest.TestCase):
         card2.number = "two"
         card3.number = "three"
 
-        self.assertFalse(self.set.is_a_set(card1, card2, card3))
+        self.assertFalse(self.game.is_a_set(card1, card2, card3))
 
     def test_is_not_a_set2(self):
         card1 = SimpleNamespace()
@@ -276,7 +276,7 @@ class Test(unittest.TestCase):
         card2.number = "two"
         card3.number = "three"
 
-        self.assertFalse(self.set.is_a_set(card1, card2, card3))
+        self.assertFalse(self.game.is_a_set(card1, card2, card3))
 
     def test_is_not_a_set3(self):
         card1 = SimpleNamespace()
@@ -299,7 +299,7 @@ class Test(unittest.TestCase):
         card2.number = "two"
         card3.number = "three"
 
-        self.assertFalse(self.set.is_a_set(card1, card2, card3))
+        self.assertFalse(self.game.is_a_set(card1, card2, card3))
 
     def test_is_not_a_set4(self):
         card1 = SimpleNamespace()
@@ -322,7 +322,7 @@ class Test(unittest.TestCase):
         card2.number = "one"
         card3.number = "three"
 
-        self.assertFalse(self.set.is_a_set(card1, card2, card3))
+        self.assertFalse(self.game.is_a_set(card1, card2, card3))
 
     # --------------------------------------------------------------------------
     # Finding sets
@@ -377,6 +377,10 @@ class Test(unittest.TestCase):
 
         self.assertEqual(1, len(sets))  # Find 1 Set.
         self.assertEqual(3, len(board)) # Number of cards remaining on the Board.
+
+    def test_play_game(self):
+        discovered, _ = self.game.play_quiet()
+        self.assertTrue(discovered > 20 or discovered < 29)
 
 # ------------------------------------------------------------------------------
 

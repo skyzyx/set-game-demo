@@ -10,6 +10,7 @@ Copyright (c) 2016 [Ryan Parman](https://github.com/skyzyx).
 """
 
 from __future__ import print_function
+import argparse
 import collections
 import itertools
 import random
@@ -148,7 +149,7 @@ class SetGame(object):
             print()
             sets = self.find_sets(self.board)
             print("Discovered {quantity}.".format(
-                quantity=SetGame.__plural(len(sets), 'set', 'sets')
+                quantity=SetGame._SetGame__plural(len(sets), 'set', 'sets')
             ))
 
             for i, sset in enumerate(sets):
@@ -158,7 +159,7 @@ class SetGame(object):
 
             print()
             print("These are the remaining {quantity} on the board.".format(
-                quantity=SetGame.__plural(len(self.board), 'card', 'cards')
+                quantity=SetGame._SetGame__plural(len(self.board), 'card', 'cards')
             ))
             SetGame.display_cards(self.board)
             print()
@@ -169,7 +170,7 @@ class SetGame(object):
             print()
             self.board += self.deal(3)
             print("Dealing 3 more cards. You now have {quantity} on the board.".format(
-                quantity=SetGame.__plural(len(self.board), 'card', 'cards')
+                quantity=SetGame._SetGame__plural(len(self.board), 'card', 'cards')
             ))
             SetGame.display_cards(self.board)
             print()
@@ -182,7 +183,7 @@ class SetGame(object):
         print()
         sets = self.find_sets(self.board)
         print("Discovered {quantity}.".format(
-            quantity=SetGame.__plural(len(sets), 'set', 'sets')
+            quantity=SetGame._SetGame__plural(len(sets), 'set', 'sets')
         ))
 
         for i, sset in enumerate(sets):
@@ -192,7 +193,7 @@ class SetGame(object):
 
         print()
         print("These are the remaining {quantity} on the board.".format(
-            quantity=SetGame.__plural(len(self.board), 'card', 'cards')
+            quantity=SetGame._SetGame__plural(len(self.board), 'card', 'cards')
         ))
         SetGame.display_cards(self.board)
         print()
@@ -204,7 +205,7 @@ class SetGame(object):
         print("There are no more cards left in the deck.")
         print()
         print("These are the {} that are left on the table.".format(
-            SetGame.__plural(len(self.board), 'card', 'cards')
+            SetGame._SetGame__plural(len(self.board), 'card', 'cards')
         ))
         SetGame.display_cards(self.board)
         print()
@@ -213,7 +214,7 @@ class SetGame(object):
         # Final score.
         print()
         print("You discovered {quantity}.".format(
-            quantity=SetGame.__plural(len(self.sets), 'set', 'sets')
+            quantity=SetGame._SetGame__plural(len(self.sets), 'set', 'sets')
         ))
 
         for i, sset in enumerate(self.sets):
@@ -422,3 +423,40 @@ class SimpleNamespace(object): # pragma: no cover
 
     def __eq__(self, other):
         return self.__dict__ == other.__dict__
+
+# ------------------------------------------------------------------------------
+
+
+def main(): # pragma: no cover
+
+    # Available CLI flags.
+    parser = argparse.ArgumentParser(
+        description="Play a game of Set.",
+    )
+
+    parser.add_argument(
+        "-q", "--quiet",
+        dest='quiet',
+        action='store_true',
+        help="By default, the game will play in chatty, interactive mode. This will enable a quieter, results-only mode.")
+
+    parser.set_defaults(quiet=False)
+    flags = parser.parse_args()
+    game = SetGame()
+
+    if flags.quiet:
+        discovered, sets = game.play_quiet()
+        print("You discovered {quantity}.".format(
+            quantity=SetGame._SetGame__plural(len(game.sets), 'set', 'sets')
+        ))
+
+        for i, sset in enumerate(game.sets):
+            print()
+            print("Set #{index}".format(index=(i + 1)))
+            SetGame.display_cards(sset)
+
+    else:
+        game.play()
+
+if __name__ == "__main__":
+    main()
