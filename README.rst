@@ -448,7 +448,7 @@ who participated in this project.
 Licensed for use under the terms of the `Apache
 2.0 <http://opensource.org/licenses/Apache-2.0>`__ license.
 
-.. |Source| image:: http://img.shields.io/badge/source-skyzyx/set-game-demo-blue.svg?style=flat-square
+.. |Source| image:: https://img.shields.io/badge/source-skyzyx/set–game–demo-blue.svg?style=flat-square
    :target: https://github.com/skyzyx/set-game-demo
 .. |Downloads| image:: https://img.shields.io/pypi/dm/skyzyx-set-game-demo.svg?style=flat-square
    :target: https://github.com/skyzyx/set-game-demo/releases
