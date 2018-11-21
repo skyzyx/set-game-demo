@@ -855,6 +855,77 @@ table {
 
   </style>
 
+  <style type="text/css">
+  .codehilite .hll { background-color: #ffffcc }
+.codehilite  { background: #f8f8f8; }
+.codehilite .c { color: #408080; font-style: italic } /* Comment */
+.codehilite .err { border: 1px solid #FF0000 } /* Error */
+.codehilite .k { color: #008000; font-weight: bold } /* Keyword */
+.codehilite .o { color: #666666 } /* Operator */
+.codehilite .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.codehilite .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.codehilite .cp { color: #BC7A00 } /* Comment.Preproc */
+.codehilite .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.codehilite .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.codehilite .cs { color: #408080; font-style: italic } /* Comment.Special */
+.codehilite .gd { color: #A00000 } /* Generic.Deleted */
+.codehilite .ge { font-style: italic } /* Generic.Emph */
+.codehilite .gr { color: #FF0000 } /* Generic.Error */
+.codehilite .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.codehilite .gi { color: #00A000 } /* Generic.Inserted */
+.codehilite .go { color: #888888 } /* Generic.Output */
+.codehilite .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.codehilite .gs { font-weight: bold } /* Generic.Strong */
+.codehilite .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.codehilite .gt { color: #0044DD } /* Generic.Traceback */
+.codehilite .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.codehilite .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.codehilite .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.codehilite .kp { color: #008000 } /* Keyword.Pseudo */
+.codehilite .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.codehilite .kt { color: #B00040 } /* Keyword.Type */
+.codehilite .m { color: #666666 } /* Literal.Number */
+.codehilite .s { color: #BA2121 } /* Literal.String */
+.codehilite .na { color: #7D9029 } /* Name.Attribute */
+.codehilite .nb { color: #008000 } /* Name.Builtin */
+.codehilite .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.codehilite .no { color: #880000 } /* Name.Constant */
+.codehilite .nd { color: #AA22FF } /* Name.Decorator */
+.codehilite .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.codehilite .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.codehilite .nf { color: #0000FF } /* Name.Function */
+.codehilite .nl { color: #A0A000 } /* Name.Label */
+.codehilite .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.codehilite .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.codehilite .nv { color: #19177C } /* Name.Variable */
+.codehilite .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.codehilite .w { color: #bbbbbb } /* Text.Whitespace */
+.codehilite .mb { color: #666666 } /* Literal.Number.Bin */
+.codehilite .mf { color: #666666 } /* Literal.Number.Float */
+.codehilite .mh { color: #666666 } /* Literal.Number.Hex */
+.codehilite .mi { color: #666666 } /* Literal.Number.Integer */
+.codehilite .mo { color: #666666 } /* Literal.Number.Oct */
+.codehilite .sa { color: #BA2121 } /* Literal.String.Affix */
+.codehilite .sb { color: #BA2121 } /* Literal.String.Backtick */
+.codehilite .sc { color: #BA2121 } /* Literal.String.Char */
+.codehilite .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.codehilite .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.codehilite .s2 { color: #BA2121 } /* Literal.String.Double */
+.codehilite .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.codehilite .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.codehilite .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.codehilite .sx { color: #008000 } /* Literal.String.Other */
+.codehilite .sr { color: #BB6688 } /* Literal.String.Regex */
+.codehilite .s1 { color: #BA2121 } /* Literal.String.Single */
+.codehilite .ss { color: #19177C } /* Literal.String.Symbol */
+.codehilite .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.codehilite .fm { color: #0000FF } /* Name.Function.Magic */
+.codehilite .vc { color: #19177C } /* Name.Variable.Class */
+.codehilite .vg { color: #19177C } /* Name.Variable.Global */
+.codehilite .vi { color: #19177C } /* Name.Variable.Instance */
+.codehilite .vm { color: #19177C } /* Name.Variable.Magic */
+.codehilite .il { color: #666666 } /* Literal.Number.Integer.Long */
+  </style>
 
   <style type="text/css">
   
@@ -1021,447 +1092,449 @@ table {
   
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-set_game_demo', this);">Show source &equiv;</a></p>
   <div id="source-set_game_demo" class="source">
-    <pre><code>#! /usr/bin/env python
-# -*- coding: utf-8 -*-
+    <div class="codehilite"><pre><span></span><span class="ch">#! /usr/bin/env python</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
 
-"""
-A simple demo of the game of "Set".
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">A simple demo of the game of &quot;Set&quot;.</span>
 
-Copyright (c) 2016 [Ryan Parman](https://github.com/skyzyx).
+<span class="sd">Copyright (c) 2016 [Ryan Parman](https://github.com/skyzyx).</span>
 
-<http://opensource.org/licenses/Apache2.0>
-"""
+<span class="sd">&lt;http://opensource.org/licenses/Apache2.0&gt;</span>
+<span class="sd">&quot;&quot;&quot;</span>
 
-from __future__ import print_function
-import argparse
-import collections
-import itertools
-import random
-import six
-from prettytable import PrettyTable
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">collections</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">six</span>
+<span class="kn">from</span> <span class="nn">prettytable</span> <span class="kn">import</span> <span class="n">PrettyTable</span>
 
 
-class SetGame(object):
-    """
-    "Set" is a card game where a group of players try to identify a _Set_ of cards from those placed face-up on a table.
+<span class="k">class</span> <span class="nc">SetGame</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &quot;Set&quot; is a card game where a group of players try to identify a _Set_ of cards from those placed face-up on a table.</span>
 
-    **Game Rules:**
+<span class="sd">    **Game Rules:**</span>
 
-    Each _Card_ has an image on it with 4 orthogonal attributes:
+<span class="sd">    Each _Card_ has an image on it with 4 orthogonal attributes:</span>
 
-    * Color (red, green, or purple)
-    * Shape (diamond, squiggle, or oval)
-    * Shading (solid, empty, or striped)
-    * Number (one, two, or three)
+<span class="sd">    * Color (red, green, or purple)</span>
+<span class="sd">    * Shape (diamond, squiggle, or oval)</span>
+<span class="sd">    * Shading (solid, empty, or striped)</span>
+<span class="sd">    * Number (one, two, or three)</span>
 
-    Three _Cards_ are a part of a _Set_ if, for each _Property_, the values are all the same or all different.
+<span class="sd">    Three _Cards_ are a part of a _Set_ if, for each _Property_, the values are all the same or all different.</span>
 
-    For example:
+<span class="sd">    For example:</span>
 
-    * The _Cards_ "two red solid squiggles", "one green solid diamond", "three purple solid ovals" would make up a
-      _Set_. (number, shape, and color are different, shading is the same)
-    * The _Cards_ "two red solid squiggles", "one green solid squiggles", "three purple solid ovals" would not make up a
-      _Set_, because shape is the same on two _Cards_, but different on the third.
-    * A _Game_ of "Set" starts by dealing 12 _Cards_, face-up. When a player sees three _Cards_ that make up a _Set_,
-      they yell "Set!" and grab the _Cards_. New _Cards_ are dealt from the _Deck_ to replace them.
-    * If no player can find a _Set_, three more _Cards_ are dealt (to make 15, then 18, then 21...)
-    * The _Game_ is over when there are no _Cards_ left in the _Deck_, and no _Sets_ left on the table. The player with
-      the most _Sets_ wins.
+<span class="sd">    * The _Cards_ &quot;two red solid squiggles&quot;, &quot;one green solid diamond&quot;, &quot;three purple solid ovals&quot; would make up a</span>
+<span class="sd">      _Set_. (number, shape, and color are different, shading is the same)</span>
+<span class="sd">    * The _Cards_ &quot;two red solid squiggles&quot;, &quot;one green solid squiggles&quot;, &quot;three purple solid ovals&quot; would not make up a</span>
+<span class="sd">      _Set_, because shape is the same on two _Cards_, but different on the third.</span>
+<span class="sd">    * A _Game_ of &quot;Set&quot; starts by dealing 12 _Cards_, face-up. When a player sees three _Cards_ that make up a _Set_,</span>
+<span class="sd">      they yell &quot;Set!&quot; and grab the _Cards_. New _Cards_ are dealt from the _Deck_ to replace them.</span>
+<span class="sd">    * If no player can find a _Set_, three more _Cards_ are dealt (to make 15, then 18, then 21...)</span>
+<span class="sd">    * The _Game_ is over when there are no _Cards_ left in the _Deck_, and no _Sets_ left on the table. The player with</span>
+<span class="sd">      the most _Sets_ wins.</span>
 
-    **Game Requirements:**
+<span class="sd">    **Game Requirements:**</span>
 
-    Your task is to model the _Game_ in code, and implement the following methods:
+<span class="sd">    Your task is to model the _Game_ in code, and implement the following methods:</span>
 
-    * A method that takes three _Cards_, and determines whether the three _Cards_ make a _Set_.
-    * A method that given a _Board_ of _Cards_, will either find a _Set_, or determine that there are no _Sets_ on the
-      table.
-    * A method that will play an entire _Game_ of "Set", from beginning to end, and return a list of each valid _Sets_
-      you removed from the _Board_.
+<span class="sd">    * A method that takes three _Cards_, and determines whether the three _Cards_ make a _Set_.</span>
+<span class="sd">    * A method that given a _Board_ of _Cards_, will either find a _Set_, or determine that there are no _Sets_ on the</span>
+<span class="sd">      table.</span>
+<span class="sd">    * A method that will play an entire _Game_ of &quot;Set&quot;, from beginning to end, and return a list of each valid _Sets_</span>
+<span class="sd">      you removed from the _Board_.</span>
 
-    For this last method, there will be multiple correct solutions, but any valid list of _Sets_ is fine.
+<span class="sd">    For this last method, there will be multiple correct solutions, but any valid list of _Sets_ is fine.</span>
 
-    **Compatibility:**
+<span class="sd">    **Compatibility:**</span>
 
-    Tested against the following Python versions:
+<span class="sd">    Tested against the following Python versions:</span>
 
-    * Python 2.7
-    * Python 3.3
-    * Python 3.4
-    * Python 3.5
-    * Python 3.6 (beta)
-    * Pypy (~2.7.10)
-    * Pypy3 (~3.2.5)
+<span class="sd">    * Python 2.7</span>
+<span class="sd">    * Python 3.3</span>
+<span class="sd">    * Python 3.4</span>
+<span class="sd">    * Python 3.5</span>
+<span class="sd">    * Python 3.6 (beta)</span>
+<span class="sd">    * Pypy (~2.7.10)</span>
+<span class="sd">    * Pypy3 (~3.2.5)</span>
 
-    **Import:**
+<span class="sd">    **Import:**</span>
 
-        from set_game_demo import SetGame
-
-    """
-
-    def __init__(self):
-        """
-        Constructs a new instance of this class.
-        """
-
-        self.colors = ["red", "green", "purple"]
-        self.shapes = ["diamond", "squiggle", "oval"]
-        self.shadings = ["solid", "empty", "striped"]
-        self.numbers = ["one", "two", "three"]
-
-        deck = []
-
-        for color in self.colors:
-            for shape in self.shapes:
-                for shading in self.shadings:
-                    for number in self.numbers:
-                        card = {}
-                        card["color"] = color
-                        card["shape"] = shape
-                        card["shading"] = shading
-                        card["number"] = number
-
-                        deck.append(card)
-
-        random.shuffle(deck)
-
-        self.deck = collections.deque(deck)
-        self.board = []
-        self.sets = []
-
-    def deal(self, cards=12):
-        """
-        Deals a given number of cards from the top (front) of the deck.
-
-        `cards (integer)`: The number of cards to deal out to the board. The default value is `12`.
-
-        `return (cards[])`: A list (i.e., array) of objects representing cards.
-        """
-
-        out = []
-
-        for _ in six.moves.range(cards):
-            out.append(self.deck.popleft())
-
-        return out
-
-    def play(self):  # pragma: no cover
-        """
-        Play a (chatty) game of Set.
-
-        `return (void)`
-        """
-        # pylint: disable=R0915
-
-        # Introduction
-        print("Welcome to a game of Set.")
-        print()
-        six.moves.input("=> Press any key to continue...")
-
-        # First deal
-        print()
-        print("Dealing 12 cards onto the board.")
-        self.board = self.deal(12)
-        SetGame.display_cards(self.board)
-        print()
-        print("Cards on the board: {}".format(len(self.board)))
-        print("Cards in the deck:  {}".format(len(self.deck)))
-        print("Sets discovered:    {}".format(len(self.sets)))
-        six.moves.input("=> Press any key to continue...")
-
-        while len(self.deck) > 0:
-            # Find sets
-            print()
-            sets = self.find_sets(self.board)
-            print("Discovered {quantity}.".format(
-                quantity=SetGame.plural(len(sets), "set", "sets")
-            ))
-
-            for i, sset in enumerate(sets):
-                print()
-                print("Set #{index}".format(index=(i + 1)))
-                SetGame.display_cards(sset)
-
-            print()
-            print("These are the remaining {quantity} on the board.".format(
-                quantity=SetGame.plural(len(self.board), "card", "cards")
-            ))
-            SetGame.display_cards(self.board)
-            print()
-            self.sets += sets
-            six.moves.input("=> Press any key to continue...")
-
-            # Deal 3 more cards
-            print()
-            self.board += self.deal(3)
-            print("Dealing 3 more cards. You now have {quantity} on the board.".format(
-                quantity=SetGame.plural(len(self.board), "card", "cards")
-            ))
-            SetGame.display_cards(self.board)
-            print()
-            print("Cards on the board: {}".format(len(self.board)))
-            print("Cards in the deck:  {}".format(len(self.deck)))
-            print("Sets discovered:    {}".format(len(self.sets)))
-            six.moves.input("=> Press any key to continue...")
-
-        # Find the very last set(s)
-        print()
-        sets = self.find_sets(self.board)
-        print("Discovered {quantity}.".format(
-            quantity=SetGame.plural(len(sets), "set", "sets")
-        ))
-
-        for i, sset in enumerate(sets):
-            print()
-            print("Set #{index}".format(index=(i + 1)))
-            SetGame.display_cards(sset)
-
-        print()
-        print("These are the remaining {quantity} on the board.".format(
-            quantity=SetGame.plural(len(self.board), "card", "cards")
-        ))
-        SetGame.display_cards(self.board)
-        print()
-        self.sets += sets
-        six.moves.input("=> Press any key to continue...")
-
-        # No more cards in the deck.
-        print()
-        print("There are no more cards left in the deck.")
-        print()
-        print("These are the {} that are left on the table.".format(
-            SetGame.plural(len(self.board), "card", "cards")
-        ))
-        SetGame.display_cards(self.board)
-        print()
-        six.moves.input("=> Congratulations! You have completed the game. Press any key to see the results.")
-
-        # Final score.
-        print()
-        print("You discovered {quantity}.".format(
-            quantity=SetGame.plural(len(self.sets), "set", "sets")
-        ))
-
-        for i, sset in enumerate(self.sets):
-            print()
-            print("Set #{index}".format(index=(i + 1)))
-            SetGame.display_cards(sset)
-
-        # All done.
-        print()
-        print("Please play again!")
-        print()
-
-    def play_quiet(self):
-        """
-        Play a (quiet) game of Set.
-
-        `return (tuple(integer, sets[]))`: Returns a tuple where the first item is the number of Sets discovered. The
-            second item is the complete list of Sets.
-        """
-        self.board = self.deal(12)
-
-        # Find sets and re-deal until we are out of cards.
-        while len(self.deck) > 0:
-            self.sets += self.find_sets(self.board)
-            self.board += self.deal(3)
-
-        # Find the very last set(s).
-        self.sets += self.find_sets(self.board)
-
-        # Return a tuple
-        return (len(self.sets), self.sets)
-
-    @staticmethod
-    def display_cards(cards):  # pragma: no cover
-        """
-        Accepts an array of cards, and renders them for humans in a table to `stdout`.
-
-        `cards (cards[])`: A list (i.e., array) of objects representing cards.
-
-        `return (void)`
-        """
-
-        table = PrettyTable(["Number", "Color", "Shape", "Shading"])
-
-        for card in cards:
-            table.add_row([card["number"], card["color"], card["shape"], card["shading"]])
-
-        print(table)
-
-    @staticmethod
-    def is_a_set(card1, card2, card3):
-        """
-        Determines whether a group of 3 cards is a _set_ or not.
-
-        `card1 (card)`: A card object to compare against other card objects.
-
-        `card2 (card)`: A card object to compare against other card objects.
-
-        `card3 (card)`: A card object to compare against other card objects.
-
-        `return (boolean)`: Whether or not the given cards represent a _Set_. A value of `True` means that the group is
-            a set. A value of `False` means that the group is _not_ a set.
-        """
-
-        for attribute in ["color", "shape", "shading", "number"]:
-            if (SetGame.__all_unique([
-                    card1[attribute],
-                    card2[attribute],
-                    card3[attribute],
-                ]) is False
-                    and
-                    SetGame.__all_same([
-                        card1[attribute],
-                        card2[attribute],
-                        card3[attribute],
-                    ]) is False):
-
-                return False
-
-        # Did we actually make it all the way here?
-        return True
-
-    @staticmethod
-    def find_sets(board):
-        """
-        Given a _Board_ of cards, determines whether or not it contains a _Set_.
-
-        `board (cards[])`: A list (i.e., array) of Cards that are on the Board.
-
-        `return (sets[])`: A list (i.e., array) of Sets. Each Set contains 3 Cards.
-        """
-
-        sets = []
-
-        # Calculate the initial set of combinations.
-        combinations = itertools.combinations(six.moves.range(len(board)), 3)
-
-        # Run until we explicitly break.
-        while True:
-
-            # Grab the combination.
-            combination = next(combinations, None)
-
-            # As long as we didn't get a `None` back...
-            while combination is not None:
-
-                # Check to see if the three cards we got back for this combination are a Set.
-                if SetGame.is_a_set(board[combination[0]], board[combination[1]], board[combination[2]]) is True:
-
-                    # If so, save them.
-                    sets.append([board[combination[0]], board[combination[1]], board[combination[2]]])
-
-                    # After we save the Set, remove the cards from the Board.
-                    # Python list indexes collapse automatically, so remove from the end first.
-                    del board[combination[2]]
-                    del board[combination[1]]
-                    del board[combination[0]]
-
-                    # This means that we now need to recalculate the Board, and start our loop over again.
-                    combinations = itertools.combinations(six.moves.range(len(board)), 3)
-                    break
-
-                else:
-                    # Move on to the next combination in the list.
-                    combination = next(combinations, None)
-                    continue
-
-            # If we have reached the end of the list of combinations, quit.
-            if combination is None:
-                break
-
-        # Return all matching sets.
-        return sets
-
-    @staticmethod
-    def __all_unique(arr):
-        """
-        Determines whether or not a `List` of values are all unique.
-
-        `arr (scalar[])`: A list (i.e., array) of scalar values to compare.
-
-        `return (boolean)`: Whether or not a `List` of values are all different. A value of `True` means that the values
-            are all unique. A value of `False` means that the values are not all unique.
-        """
-
-        return len(set(arr)) == len(arr)
-
-    @staticmethod
-    def __all_same(arr):
-        """
-        Determines whether or not a `List` of values are all identical.
-
-        `arr (scalar[])`: A list (i.e., array) of scalar values to compare.
-
-        `return (boolean)`: Whether or not a `List` of values are all identical. A value of `True` means that the values
-            are all identical. A value of `False` means that the values are not all identical.
-        """
-
-        return len(set(arr)) == 1
-
-    @staticmethod
-    def plural(count, singular, plural):
-        """
-        Determines whether a response should be singular or plural, depending on the number of items being referenced.
-
-        `count (integer)`: The number of items to adjust language for.
-
-        `singular (string)`: The singular version of the phrasing.
-
-        `plural (string)`: The plural version of the phrasing.
-
-        `return (string)`: A properly-formatted string.
-        """
-
-        return "{count} {word}".format(
-            count=count,
-            word=singular
-        ) if count == 1 else "{count} {word}".format(
-            count=count,
-            word=plural
-        )
-
-# ------------------------------------------------------------------------------
-
-
-def main():  # pragma: no cover
-    """
-    This function is run when the script is executed from the command-line.
-    """
-
-    # Available CLI flags.
-    parser = argparse.ArgumentParser(
-        description="Play a game of Set.",
-    )
-
-    parser.add_argument(
-        "-q", "--quiet",
-        dest="quiet",
-        action="store_true",
-        help="By default, the game will play in chatty, interactive mode. "
-        "This will enable a quieter, results-only mode.")
-
-    parser.set_defaults(quiet=False)
-    flags = parser.parse_args()
-    game = SetGame()
-
-    if flags.quiet:
-        discovered, sets = game.play_quiet()
-        print("You discovered {quantity}.".format(
-            quantity=SetGame.plural(discovered, "set", "sets")
-        ))
-
-        for i, sset in enumerate(sets):
-            print()
-            print("Set #{index}".format(index=(i + 1)))
-            SetGame.display_cards(sset)
-
-    else:
-        game.play()
-
-if __name__ == "__main__":  # pragma: no cover
-    main()
-</code></pre>
+<span class="sd">        from set_game_demo import SetGame</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructs a new instance of this class.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;purple&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shapes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;diamond&quot;</span><span class="p">,</span> <span class="s2">&quot;squiggle&quot;</span><span class="p">,</span> <span class="s2">&quot;oval&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shadings</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;solid&quot;</span><span class="p">,</span> <span class="s2">&quot;empty&quot;</span><span class="p">,</span> <span class="s2">&quot;striped&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="s2">&quot;three&quot;</span><span class="p">]</span>
+
+        <span class="n">deck</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">colors</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">shape</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">shapes</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">shading</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">shadings</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">numbers</span><span class="p">:</span>
+                        <span class="n">card</span> <span class="o">=</span> <span class="p">{}</span>
+                        <span class="n">card</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">color</span>
+                        <span class="n">card</span><span class="p">[</span><span class="s2">&quot;shape&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">shape</span>
+                        <span class="n">card</span><span class="p">[</span><span class="s2">&quot;shading&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">shading</span>
+                        <span class="n">card</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">number</span>
+
+                        <span class="n">deck</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">card</span><span class="p">)</span>
+
+        <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">deck</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">deck</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">deque</span><span class="p">(</span><span class="n">deck</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">board</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sets</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">deal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cards</span><span class="o">=</span><span class="mi">12</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Deals a given number of cards from the top (front) of the deck.</span>
+
+<span class="sd">        `cards (integer)`: The number of cards to deal out to the board. The default value is `12`.</span>
+
+<span class="sd">        `return (cards[])`: A list (i.e., array) of objects representing cards.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">out</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="n">cards</span><span class="p">):</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">deck</span><span class="o">.</span><span class="n">popleft</span><span class="p">())</span>
+
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span> <span class="nf">play</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Play a (chatty) game of Set.</span>
+
+<span class="sd">        `return (void)`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># pylint: disable=R0915</span>
+
+        <span class="c1"># Introduction</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Welcome to a game of Set.&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;=&gt; Press any key to continue...&quot;</span><span class="p">)</span>
+
+        <span class="c1"># First deal</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Dealing 12 cards onto the board.&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">board</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deal</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+        <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Cards on the board: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Cards in the deck:  {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">deck</span><span class="p">)))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sets discovered:    {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sets</span><span class="p">)))</span>
+        <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;=&gt; Press any key to continue...&quot;</span><span class="p">)</span>
+
+        <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">deck</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># Find sets</span>
+            <span class="k">print</span><span class="p">()</span>
+            <span class="n">sets</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_sets</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Discovered {quantity}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">quantity</span><span class="o">=</span><span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sets</span><span class="p">),</span> <span class="s2">&quot;set&quot;</span><span class="p">,</span> <span class="s2">&quot;sets&quot;</span><span class="p">)</span>
+            <span class="p">))</span>
+
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sset</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sets</span><span class="p">):</span>
+                <span class="k">print</span><span class="p">()</span>
+                <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Set #{index}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span>
+                <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="n">sset</span><span class="p">)</span>
+
+            <span class="k">print</span><span class="p">()</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;These are the remaining {quantity} on the board.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">quantity</span><span class="o">=</span><span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">),</span> <span class="s2">&quot;card&quot;</span><span class="p">,</span> <span class="s2">&quot;cards&quot;</span><span class="p">)</span>
+            <span class="p">))</span>
+            <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sets</span> <span class="o">+=</span> <span class="n">sets</span>
+            <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;=&gt; Press any key to continue...&quot;</span><span class="p">)</span>
+
+            <span class="c1"># Deal 3 more cards</span>
+            <span class="k">print</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">board</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deal</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Dealing 3 more cards. You now have {quantity} on the board.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">quantity</span><span class="o">=</span><span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">),</span> <span class="s2">&quot;card&quot;</span><span class="p">,</span> <span class="s2">&quot;cards&quot;</span><span class="p">)</span>
+            <span class="p">))</span>
+            <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">()</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Cards on the board: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)))</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Cards in the deck:  {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">deck</span><span class="p">)))</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sets discovered:    {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sets</span><span class="p">)))</span>
+            <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;=&gt; Press any key to continue...&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Find the very last set(s)</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="n">sets</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_sets</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Discovered {quantity}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">quantity</span><span class="o">=</span><span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sets</span><span class="p">),</span> <span class="s2">&quot;set&quot;</span><span class="p">,</span> <span class="s2">&quot;sets&quot;</span><span class="p">)</span>
+        <span class="p">))</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sset</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sets</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">()</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Set #{index}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span>
+            <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="n">sset</span><span class="p">)</span>
+
+        <span class="k">print</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;These are the remaining {quantity} on the board.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">quantity</span><span class="o">=</span><span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">),</span> <span class="s2">&quot;card&quot;</span><span class="p">,</span> <span class="s2">&quot;cards&quot;</span><span class="p">)</span>
+        <span class="p">))</span>
+        <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sets</span> <span class="o">+=</span> <span class="n">sets</span>
+        <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;=&gt; Press any key to continue...&quot;</span><span class="p">)</span>
+
+        <span class="c1"># No more cards in the deck.</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;There are no more cards left in the deck.&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;These are the {} that are left on the table.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">),</span> <span class="s2">&quot;card&quot;</span><span class="p">,</span> <span class="s2">&quot;cards&quot;</span><span class="p">)</span>
+        <span class="p">))</span>
+        <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;=&gt; Congratulations! You have completed the game. Press any key to see the results.&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Final score.</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;You discovered {quantity}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">quantity</span><span class="o">=</span><span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sets</span><span class="p">),</span> <span class="s2">&quot;set&quot;</span><span class="p">,</span> <span class="s2">&quot;sets&quot;</span><span class="p">)</span>
+        <span class="p">))</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sset</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sets</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">()</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Set #{index}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span>
+            <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="n">sset</span><span class="p">)</span>
+
+        <span class="c1"># All done.</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Please play again!&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">play_quiet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Play a (quiet) game of Set.</span>
+
+<span class="sd">        `return (tuple(integer, sets[]))`: Returns a tuple where the first item is the number of Sets discovered. The</span>
+<span class="sd">            second item is the complete list of Sets.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">board</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deal</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+
+        <span class="c1"># Find sets and re-deal until we are out of cards.</span>
+        <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">deck</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sets</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_sets</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">board</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deal</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+        <span class="c1"># Find the very last set(s).</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sets</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_sets</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+
+        <span class="c1"># Return a tuple</span>
+        <span class="k">return</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sets</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">sets</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">display_cards</span><span class="p">(</span><span class="n">cards</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Accepts an array of cards, and renders them for humans in a table to `stdout`.</span>
+
+<span class="sd">        `cards (cards[])`: A list (i.e., array) of objects representing cards.</span>
+
+<span class="sd">        `return (void)`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">table</span> <span class="o">=</span> <span class="n">PrettyTable</span><span class="p">([</span><span class="s2">&quot;Number&quot;</span><span class="p">,</span> <span class="s2">&quot;Color&quot;</span><span class="p">,</span> <span class="s2">&quot;Shape&quot;</span><span class="p">,</span> <span class="s2">&quot;Shading&quot;</span><span class="p">])</span>
+
+        <span class="k">for</span> <span class="n">card</span> <span class="ow">in</span> <span class="n">cards</span><span class="p">:</span>
+            <span class="n">table</span><span class="o">.</span><span class="n">add_row</span><span class="p">([</span><span class="n">card</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">],</span> <span class="n">card</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">],</span> <span class="n">card</span><span class="p">[</span><span class="s2">&quot;shape&quot;</span><span class="p">],</span> <span class="n">card</span><span class="p">[</span><span class="s2">&quot;shading&quot;</span><span class="p">]])</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">is_a_set</span><span class="p">(</span><span class="n">card1</span><span class="p">,</span> <span class="n">card2</span><span class="p">,</span> <span class="n">card3</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Determines whether a group of 3 cards is a _set_ or not.</span>
+
+<span class="sd">        `card1 (card)`: A card object to compare against other card objects.</span>
+
+<span class="sd">        `card2 (card)`: A card object to compare against other card objects.</span>
+
+<span class="sd">        `card3 (card)`: A card object to compare against other card objects.</span>
+
+<span class="sd">        `return (boolean)`: Whether or not the given cards represent a _Set_. A value of `True` means that the group is</span>
+<span class="sd">            a set. A value of `False` means that the group is _not_ a set.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">for</span> <span class="n">attribute</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">,</span> <span class="s2">&quot;shape&quot;</span><span class="p">,</span> <span class="s2">&quot;shading&quot;</span><span class="p">,</span> <span class="s2">&quot;number&quot;</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">SetGame</span><span class="o">.</span><span class="n">__all_unique</span><span class="p">([</span>
+                    <span class="n">card1</span><span class="p">[</span><span class="n">attribute</span><span class="p">],</span>
+                    <span class="n">card2</span><span class="p">[</span><span class="n">attribute</span><span class="p">],</span>
+                    <span class="n">card3</span><span class="p">[</span><span class="n">attribute</span><span class="p">],</span>
+                <span class="p">])</span> <span class="ow">is</span> <span class="bp">False</span>
+
+                    <span class="ow">and</span> <span class="n">SetGame</span><span class="o">.</span><span class="n">__all_same</span><span class="p">([</span>
+                        <span class="n">card1</span><span class="p">[</span><span class="n">attribute</span><span class="p">],</span>
+                        <span class="n">card2</span><span class="p">[</span><span class="n">attribute</span><span class="p">],</span>
+                        <span class="n">card3</span><span class="p">[</span><span class="n">attribute</span><span class="p">],</span>
+                    <span class="p">])</span> <span class="ow">is</span> <span class="bp">False</span><span class="p">):</span>
+
+                <span class="k">return</span> <span class="bp">False</span>
+
+        <span class="c1"># Did we actually make it all the way here?</span>
+        <span class="k">return</span> <span class="bp">True</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">find_sets</span><span class="p">(</span><span class="n">board</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Given a _Board_ of cards, determines whether or not it contains a _Set_.</span>
+
+<span class="sd">        `board (cards[])`: A list (i.e., array) of Cards that are on the Board.</span>
+
+<span class="sd">        `return (sets[])`: A list (i.e., array) of Sets. Each Set contains 3 Cards.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">sets</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># Calculate the initial set of combinations.</span>
+        <span class="n">combinations</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">board</span><span class="p">)),</span> <span class="mi">3</span><span class="p">)</span>
+
+        <span class="c1"># Run until we explicitly break.</span>
+        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+
+            <span class="c1"># Grab the combination.</span>
+            <span class="n">combination</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">combinations</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+
+            <span class="c1"># As long as we didn&#39;t get a `None` back...</span>
+            <span class="k">while</span> <span class="n">combination</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+
+                <span class="c1"># Check to see if the three cards we got back for this combination are a Set.</span>
+                <span class="k">if</span> <span class="n">SetGame</span><span class="o">.</span><span class="n">is_a_set</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">2</span><span class="p">]])</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
+
+                    <span class="c1"># If so, save them.</span>
+                    <span class="n">sets</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">2</span><span class="p">]]])</span>
+
+                    <span class="c1"># After we save the Set, remove the cards from the Board.</span>
+                    <span class="c1"># Python list indexes collapse automatically, so remove from the end first.</span>
+                    <span class="k">del</span> <span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
+                    <span class="k">del</span> <span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+                    <span class="k">del</span> <span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+
+                    <span class="c1"># This means that we now need to recalculate the Board, and start our loop over again.</span>
+                    <span class="n">combinations</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">board</span><span class="p">)),</span> <span class="mi">3</span><span class="p">)</span>
+                    <span class="k">break</span>
+
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># Move on to the next combination in the list.</span>
+                    <span class="n">combination</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">combinations</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+                    <span class="k">continue</span>
+
+            <span class="c1"># If we have reached the end of the list of combinations, quit.</span>
+            <span class="k">if</span> <span class="n">combination</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">break</span>
+
+        <span class="c1"># Return all matching sets.</span>
+        <span class="k">return</span> <span class="n">sets</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">__all_unique</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Determines whether or not a `List` of values are all unique.</span>
+
+<span class="sd">        `arr (scalar[])`: A list (i.e., array) of scalar values to compare.</span>
+
+<span class="sd">        `return (boolean)`: Whether or not a `List` of values are all different. A value of `True` means that the values</span>
+<span class="sd">            are all unique. A value of `False` means that the values are not all unique.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">__all_same</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Determines whether or not a `List` of values are all identical.</span>
+
+<span class="sd">        `arr (scalar[])`: A list (i.e., array) of scalar values to compare.</span>
+
+<span class="sd">        `return (boolean)`: Whether or not a `List` of values are all identical. A value of `True` means that the values</span>
+<span class="sd">            are all identical. A value of `False` means that the values are not all identical.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">plural</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">singular</span><span class="p">,</span> <span class="n">plural</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Determines whether a response should be singular or plural, depending on the number of items being referenced.</span>
+
+<span class="sd">        `count (integer)`: The number of items to adjust language for.</span>
+
+<span class="sd">        `singular (string)`: The singular version of the phrasing.</span>
+
+<span class="sd">        `plural (string)`: The plural version of the phrasing.</span>
+
+<span class="sd">        `return (string)`: A properly-formatted string.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="s2">&quot;{count} {word}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">count</span><span class="o">=</span><span class="n">count</span><span class="p">,</span>
+            <span class="n">word</span><span class="o">=</span><span class="n">singular</span>
+        <span class="p">)</span> <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;{count} {word}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">count</span><span class="o">=</span><span class="n">count</span><span class="p">,</span>
+            <span class="n">word</span><span class="o">=</span><span class="n">plural</span>
+        <span class="p">)</span>
+
+<span class="c1"># ------------------------------------------------------------------------------</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>  <span class="c1"># pragma: no cover</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function is run when the script is executed from the command-line.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Available CLI flags.</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Play a game of Set.&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+        <span class="s2">&quot;-q&quot;</span><span class="p">,</span> <span class="s2">&quot;--quiet&quot;</span><span class="p">,</span>
+        <span class="n">dest</span><span class="o">=</span><span class="s2">&quot;quiet&quot;</span><span class="p">,</span>
+        <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;By default, the game will play in chatty, interactive mode. &quot;</span>
+        <span class="s2">&quot;This will enable a quieter, results-only mode.&quot;</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="o">.</span><span class="n">set_defaults</span><span class="p">(</span><span class="n">quiet</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">flags</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+    <span class="n">game</span> <span class="o">=</span> <span class="n">SetGame</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">flags</span><span class="o">.</span><span class="n">quiet</span><span class="p">:</span>
+        <span class="n">discovered</span><span class="p">,</span> <span class="n">sets</span> <span class="o">=</span> <span class="n">game</span><span class="o">.</span><span class="n">play_quiet</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;You discovered {quantity}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">quantity</span><span class="o">=</span><span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="n">discovered</span><span class="p">,</span> <span class="s2">&quot;set&quot;</span><span class="p">,</span> <span class="s2">&quot;sets&quot;</span><span class="p">)</span>
+        <span class="p">))</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sset</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sets</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">()</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Set #{index}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span>
+            <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="n">sset</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">game</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
   </div>
 
   </header>
@@ -1482,41 +1555,42 @@ if __name__ == "__main__":  # pragma: no cover
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-set_game_demo.main', this);">Show source &equiv;</a></p>
   <div id="source-set_game_demo.main" class="source">
-    <pre><code>def main():  # pragma: no cover
-    """
-    This function is run when the script is executed from the command-line.
-    """
+    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>  <span class="c1"># pragma: no cover</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function is run when the script is executed from the command-line.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
-    # Available CLI flags.
-    parser = argparse.ArgumentParser(
-        description="Play a game of Set.",
-    )
+    <span class="c1"># Available CLI flags.</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Play a game of Set.&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
 
-    parser.add_argument(
-        "-q", "--quiet",
-        dest="quiet",
-        action="store_true",
-        help="By default, the game will play in chatty, interactive mode. "
-        "This will enable a quieter, results-only mode.")
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+        <span class="s2">&quot;-q&quot;</span><span class="p">,</span> <span class="s2">&quot;--quiet&quot;</span><span class="p">,</span>
+        <span class="n">dest</span><span class="o">=</span><span class="s2">&quot;quiet&quot;</span><span class="p">,</span>
+        <span class="n">action</span><span class="o">=</span><span class="s2">&quot;store_true&quot;</span><span class="p">,</span>
+        <span class="n">help</span><span class="o">=</span><span class="s2">&quot;By default, the game will play in chatty, interactive mode. &quot;</span>
+        <span class="s2">&quot;This will enable a quieter, results-only mode.&quot;</span><span class="p">)</span>
 
-    parser.set_defaults(quiet=False)
-    flags = parser.parse_args()
-    game = SetGame()
+    <span class="n">parser</span><span class="o">.</span><span class="n">set_defaults</span><span class="p">(</span><span class="n">quiet</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">flags</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+    <span class="n">game</span> <span class="o">=</span> <span class="n">SetGame</span><span class="p">()</span>
 
-    if flags.quiet:
-        discovered, sets = game.play_quiet()
-        print("You discovered {quantity}.".format(
-            quantity=SetGame.plural(discovered, "set", "sets")
-        ))
+    <span class="k">if</span> <span class="n">flags</span><span class="o">.</span><span class="n">quiet</span><span class="p">:</span>
+        <span class="n">discovered</span><span class="p">,</span> <span class="n">sets</span> <span class="o">=</span> <span class="n">game</span><span class="o">.</span><span class="n">play_quiet</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;You discovered {quantity}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">quantity</span><span class="o">=</span><span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="n">discovered</span><span class="p">,</span> <span class="s2">&quot;set&quot;</span><span class="p">,</span> <span class="s2">&quot;sets&quot;</span><span class="p">)</span>
+        <span class="p">))</span>
 
-        for i, sset in enumerate(sets):
-            print()
-            print("Set #{index}".format(index=(i + 1)))
-            SetGame.display_cards(sset)
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sset</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sets</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">()</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Set #{index}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span>
+            <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="n">sset</span><span class="p">)</span>
 
-    else:
-        game.play()
-</code></pre>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">game</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+</pre></div>
+
   </div>
 </div>
 
@@ -1573,391 +1647,392 @@ if __name__ == "__main__":  # pragma: no cover
 <li>Pypy3 (~3.2.5)</li>
 </ul>
 <p><strong>Import:</strong></p>
-<pre><code>from set_game_demo import SetGame
-</code></pre></div>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">set_game_demo</span> <span class="kn">import</span> <span class="n">SetGame</span>
+</pre></div></div>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-set_game_demo.SetGame', this);">Show source &equiv;</a></p>
   <div id="source-set_game_demo.SetGame" class="source">
-    <pre><code>class SetGame(object):
-    """
-    "Set" is a card game where a group of players try to identify a _Set_ of cards from those placed face-up on a table.
+    <div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">SetGame</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &quot;Set&quot; is a card game where a group of players try to identify a _Set_ of cards from those placed face-up on a table.</span>
 
-    **Game Rules:**
+<span class="sd">    **Game Rules:**</span>
 
-    Each _Card_ has an image on it with 4 orthogonal attributes:
+<span class="sd">    Each _Card_ has an image on it with 4 orthogonal attributes:</span>
 
-    * Color (red, green, or purple)
-    * Shape (diamond, squiggle, or oval)
-    * Shading (solid, empty, or striped)
-    * Number (one, two, or three)
+<span class="sd">    * Color (red, green, or purple)</span>
+<span class="sd">    * Shape (diamond, squiggle, or oval)</span>
+<span class="sd">    * Shading (solid, empty, or striped)</span>
+<span class="sd">    * Number (one, two, or three)</span>
 
-    Three _Cards_ are a part of a _Set_ if, for each _Property_, the values are all the same or all different.
+<span class="sd">    Three _Cards_ are a part of a _Set_ if, for each _Property_, the values are all the same or all different.</span>
 
-    For example:
+<span class="sd">    For example:</span>
 
-    * The _Cards_ "two red solid squiggles", "one green solid diamond", "three purple solid ovals" would make up a
-      _Set_. (number, shape, and color are different, shading is the same)
-    * The _Cards_ "two red solid squiggles", "one green solid squiggles", "three purple solid ovals" would not make up a
-      _Set_, because shape is the same on two _Cards_, but different on the third.
-    * A _Game_ of "Set" starts by dealing 12 _Cards_, face-up. When a player sees three _Cards_ that make up a _Set_,
-      they yell "Set!" and grab the _Cards_. New _Cards_ are dealt from the _Deck_ to replace them.
-    * If no player can find a _Set_, three more _Cards_ are dealt (to make 15, then 18, then 21...)
-    * The _Game_ is over when there are no _Cards_ left in the _Deck_, and no _Sets_ left on the table. The player with
-      the most _Sets_ wins.
+<span class="sd">    * The _Cards_ &quot;two red solid squiggles&quot;, &quot;one green solid diamond&quot;, &quot;three purple solid ovals&quot; would make up a</span>
+<span class="sd">      _Set_. (number, shape, and color are different, shading is the same)</span>
+<span class="sd">    * The _Cards_ &quot;two red solid squiggles&quot;, &quot;one green solid squiggles&quot;, &quot;three purple solid ovals&quot; would not make up a</span>
+<span class="sd">      _Set_, because shape is the same on two _Cards_, but different on the third.</span>
+<span class="sd">    * A _Game_ of &quot;Set&quot; starts by dealing 12 _Cards_, face-up. When a player sees three _Cards_ that make up a _Set_,</span>
+<span class="sd">      they yell &quot;Set!&quot; and grab the _Cards_. New _Cards_ are dealt from the _Deck_ to replace them.</span>
+<span class="sd">    * If no player can find a _Set_, three more _Cards_ are dealt (to make 15, then 18, then 21...)</span>
+<span class="sd">    * The _Game_ is over when there are no _Cards_ left in the _Deck_, and no _Sets_ left on the table. The player with</span>
+<span class="sd">      the most _Sets_ wins.</span>
 
-    **Game Requirements:**
+<span class="sd">    **Game Requirements:**</span>
 
-    Your task is to model the _Game_ in code, and implement the following methods:
+<span class="sd">    Your task is to model the _Game_ in code, and implement the following methods:</span>
 
-    * A method that takes three _Cards_, and determines whether the three _Cards_ make a _Set_.
-    * A method that given a _Board_ of _Cards_, will either find a _Set_, or determine that there are no _Sets_ on the
-      table.
-    * A method that will play an entire _Game_ of "Set", from beginning to end, and return a list of each valid _Sets_
-      you removed from the _Board_.
+<span class="sd">    * A method that takes three _Cards_, and determines whether the three _Cards_ make a _Set_.</span>
+<span class="sd">    * A method that given a _Board_ of _Cards_, will either find a _Set_, or determine that there are no _Sets_ on the</span>
+<span class="sd">      table.</span>
+<span class="sd">    * A method that will play an entire _Game_ of &quot;Set&quot;, from beginning to end, and return a list of each valid _Sets_</span>
+<span class="sd">      you removed from the _Board_.</span>
 
-    For this last method, there will be multiple correct solutions, but any valid list of _Sets_ is fine.
+<span class="sd">    For this last method, there will be multiple correct solutions, but any valid list of _Sets_ is fine.</span>
 
-    **Compatibility:**
+<span class="sd">    **Compatibility:**</span>
 
-    Tested against the following Python versions:
+<span class="sd">    Tested against the following Python versions:</span>
 
-    * Python 2.7
-    * Python 3.3
-    * Python 3.4
-    * Python 3.5
-    * Python 3.6 (beta)
-    * Pypy (~2.7.10)
-    * Pypy3 (~3.2.5)
-
-    **Import:**
-
-        from set_game_demo import SetGame
-
-    """
-
-    def __init__(self):
-        """
-        Constructs a new instance of this class.
-        """
-
-        self.colors = ["red", "green", "purple"]
-        self.shapes = ["diamond", "squiggle", "oval"]
-        self.shadings = ["solid", "empty", "striped"]
-        self.numbers = ["one", "two", "three"]
-
-        deck = []
-
-        for color in self.colors:
-            for shape in self.shapes:
-                for shading in self.shadings:
-                    for number in self.numbers:
-                        card = {}
-                        card["color"] = color
-                        card["shape"] = shape
-                        card["shading"] = shading
-                        card["number"] = number
-
-                        deck.append(card)
-
-        random.shuffle(deck)
-
-        self.deck = collections.deque(deck)
-        self.board = []
-        self.sets = []
-
-    def deal(self, cards=12):
-        """
-        Deals a given number of cards from the top (front) of the deck.
-
-        `cards (integer)`: The number of cards to deal out to the board. The default value is `12`.
-
-        `return (cards[])`: A list (i.e., array) of objects representing cards.
-        """
-
-        out = []
-
-        for _ in six.moves.range(cards):
-            out.append(self.deck.popleft())
-
-        return out
-
-    def play(self):  # pragma: no cover
-        """
-        Play a (chatty) game of Set.
-
-        `return (void)`
-        """
-        # pylint: disable=R0915
-
-        # Introduction
-        print("Welcome to a game of Set.")
-        print()
-        six.moves.input("=> Press any key to continue...")
-
-        # First deal
-        print()
-        print("Dealing 12 cards onto the board.")
-        self.board = self.deal(12)
-        SetGame.display_cards(self.board)
-        print()
-        print("Cards on the board: {}".format(len(self.board)))
-        print("Cards in the deck:  {}".format(len(self.deck)))
-        print("Sets discovered:    {}".format(len(self.sets)))
-        six.moves.input("=> Press any key to continue...")
-
-        while len(self.deck) > 0:
-            # Find sets
-            print()
-            sets = self.find_sets(self.board)
-            print("Discovered {quantity}.".format(
-                quantity=SetGame.plural(len(sets), "set", "sets")
-            ))
-
-            for i, sset in enumerate(sets):
-                print()
-                print("Set #{index}".format(index=(i + 1)))
-                SetGame.display_cards(sset)
-
-            print()
-            print("These are the remaining {quantity} on the board.".format(
-                quantity=SetGame.plural(len(self.board), "card", "cards")
-            ))
-            SetGame.display_cards(self.board)
-            print()
-            self.sets += sets
-            six.moves.input("=> Press any key to continue...")
-
-            # Deal 3 more cards
-            print()
-            self.board += self.deal(3)
-            print("Dealing 3 more cards. You now have {quantity} on the board.".format(
-                quantity=SetGame.plural(len(self.board), "card", "cards")
-            ))
-            SetGame.display_cards(self.board)
-            print()
-            print("Cards on the board: {}".format(len(self.board)))
-            print("Cards in the deck:  {}".format(len(self.deck)))
-            print("Sets discovered:    {}".format(len(self.sets)))
-            six.moves.input("=> Press any key to continue...")
-
-        # Find the very last set(s)
-        print()
-        sets = self.find_sets(self.board)
-        print("Discovered {quantity}.".format(
-            quantity=SetGame.plural(len(sets), "set", "sets")
-        ))
-
-        for i, sset in enumerate(sets):
-            print()
-            print("Set #{index}".format(index=(i + 1)))
-            SetGame.display_cards(sset)
-
-        print()
-        print("These are the remaining {quantity} on the board.".format(
-            quantity=SetGame.plural(len(self.board), "card", "cards")
-        ))
-        SetGame.display_cards(self.board)
-        print()
-        self.sets += sets
-        six.moves.input("=> Press any key to continue...")
-
-        # No more cards in the deck.
-        print()
-        print("There are no more cards left in the deck.")
-        print()
-        print("These are the {} that are left on the table.".format(
-            SetGame.plural(len(self.board), "card", "cards")
-        ))
-        SetGame.display_cards(self.board)
-        print()
-        six.moves.input("=> Congratulations! You have completed the game. Press any key to see the results.")
-
-        # Final score.
-        print()
-        print("You discovered {quantity}.".format(
-            quantity=SetGame.plural(len(self.sets), "set", "sets")
-        ))
-
-        for i, sset in enumerate(self.sets):
-            print()
-            print("Set #{index}".format(index=(i + 1)))
-            SetGame.display_cards(sset)
-
-        # All done.
-        print()
-        print("Please play again!")
-        print()
-
-    def play_quiet(self):
-        """
-        Play a (quiet) game of Set.
-
-        `return (tuple(integer, sets[]))`: Returns a tuple where the first item is the number of Sets discovered. The
-            second item is the complete list of Sets.
-        """
-        self.board = self.deal(12)
-
-        # Find sets and re-deal until we are out of cards.
-        while len(self.deck) > 0:
-            self.sets += self.find_sets(self.board)
-            self.board += self.deal(3)
-
-        # Find the very last set(s).
-        self.sets += self.find_sets(self.board)
-
-        # Return a tuple
-        return (len(self.sets), self.sets)
-
-    @staticmethod
-    def display_cards(cards):  # pragma: no cover
-        """
-        Accepts an array of cards, and renders them for humans in a table to `stdout`.
-
-        `cards (cards[])`: A list (i.e., array) of objects representing cards.
-
-        `return (void)`
-        """
-
-        table = PrettyTable(["Number", "Color", "Shape", "Shading"])
-
-        for card in cards:
-            table.add_row([card["number"], card["color"], card["shape"], card["shading"]])
-
-        print(table)
-
-    @staticmethod
-    def is_a_set(card1, card2, card3):
-        """
-        Determines whether a group of 3 cards is a _set_ or not.
-
-        `card1 (card)`: A card object to compare against other card objects.
-
-        `card2 (card)`: A card object to compare against other card objects.
-
-        `card3 (card)`: A card object to compare against other card objects.
-
-        `return (boolean)`: Whether or not the given cards represent a _Set_. A value of `True` means that the group is
-            a set. A value of `False` means that the group is _not_ a set.
-        """
-
-        for attribute in ["color", "shape", "shading", "number"]:
-            if (SetGame.__all_unique([
-                    card1[attribute],
-                    card2[attribute],
-                    card3[attribute],
-                ]) is False
-                    and
-                    SetGame.__all_same([
-                        card1[attribute],
-                        card2[attribute],
-                        card3[attribute],
-                    ]) is False):
-
-                return False
-
-        # Did we actually make it all the way here?
-        return True
-
-    @staticmethod
-    def find_sets(board):
-        """
-        Given a _Board_ of cards, determines whether or not it contains a _Set_.
-
-        `board (cards[])`: A list (i.e., array) of Cards that are on the Board.
-
-        `return (sets[])`: A list (i.e., array) of Sets. Each Set contains 3 Cards.
-        """
-
-        sets = []
-
-        # Calculate the initial set of combinations.
-        combinations = itertools.combinations(six.moves.range(len(board)), 3)
-
-        # Run until we explicitly break.
-        while True:
-
-            # Grab the combination.
-            combination = next(combinations, None)
-
-            # As long as we didn't get a `None` back...
-            while combination is not None:
-
-                # Check to see if the three cards we got back for this combination are a Set.
-                if SetGame.is_a_set(board[combination[0]], board[combination[1]], board[combination[2]]) is True:
-
-                    # If so, save them.
-                    sets.append([board[combination[0]], board[combination[1]], board[combination[2]]])
-
-                    # After we save the Set, remove the cards from the Board.
-                    # Python list indexes collapse automatically, so remove from the end first.
-                    del board[combination[2]]
-                    del board[combination[1]]
-                    del board[combination[0]]
-
-                    # This means that we now need to recalculate the Board, and start our loop over again.
-                    combinations = itertools.combinations(six.moves.range(len(board)), 3)
-                    break
-
-                else:
-                    # Move on to the next combination in the list.
-                    combination = next(combinations, None)
-                    continue
-
-            # If we have reached the end of the list of combinations, quit.
-            if combination is None:
-                break
-
-        # Return all matching sets.
-        return sets
-
-    @staticmethod
-    def __all_unique(arr):
-        """
-        Determines whether or not a `List` of values are all unique.
-
-        `arr (scalar[])`: A list (i.e., array) of scalar values to compare.
-
-        `return (boolean)`: Whether or not a `List` of values are all different. A value of `True` means that the values
-            are all unique. A value of `False` means that the values are not all unique.
-        """
-
-        return len(set(arr)) == len(arr)
-
-    @staticmethod
-    def __all_same(arr):
-        """
-        Determines whether or not a `List` of values are all identical.
-
-        `arr (scalar[])`: A list (i.e., array) of scalar values to compare.
-
-        `return (boolean)`: Whether or not a `List` of values are all identical. A value of `True` means that the values
-            are all identical. A value of `False` means that the values are not all identical.
-        """
-
-        return len(set(arr)) == 1
-
-    @staticmethod
-    def plural(count, singular, plural):
-        """
-        Determines whether a response should be singular or plural, depending on the number of items being referenced.
-
-        `count (integer)`: The number of items to adjust language for.
-
-        `singular (string)`: The singular version of the phrasing.
-
-        `plural (string)`: The plural version of the phrasing.
-
-        `return (string)`: A properly-formatted string.
-        """
-
-        return "{count} {word}".format(
-            count=count,
-            word=singular
-        ) if count == 1 else "{count} {word}".format(
-            count=count,
-            word=plural
-        )
-</code></pre>
+<span class="sd">    * Python 2.7</span>
+<span class="sd">    * Python 3.3</span>
+<span class="sd">    * Python 3.4</span>
+<span class="sd">    * Python 3.5</span>
+<span class="sd">    * Python 3.6 (beta)</span>
+<span class="sd">    * Pypy (~2.7.10)</span>
+<span class="sd">    * Pypy3 (~3.2.5)</span>
+
+<span class="sd">    **Import:**</span>
+
+<span class="sd">        from set_game_demo import SetGame</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructs a new instance of this class.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;purple&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shapes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;diamond&quot;</span><span class="p">,</span> <span class="s2">&quot;squiggle&quot;</span><span class="p">,</span> <span class="s2">&quot;oval&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shadings</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;solid&quot;</span><span class="p">,</span> <span class="s2">&quot;empty&quot;</span><span class="p">,</span> <span class="s2">&quot;striped&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="s2">&quot;three&quot;</span><span class="p">]</span>
+
+        <span class="n">deck</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">colors</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">shape</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">shapes</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">shading</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">shadings</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">numbers</span><span class="p">:</span>
+                        <span class="n">card</span> <span class="o">=</span> <span class="p">{}</span>
+                        <span class="n">card</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">color</span>
+                        <span class="n">card</span><span class="p">[</span><span class="s2">&quot;shape&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">shape</span>
+                        <span class="n">card</span><span class="p">[</span><span class="s2">&quot;shading&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">shading</span>
+                        <span class="n">card</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">number</span>
+
+                        <span class="n">deck</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">card</span><span class="p">)</span>
+
+        <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">deck</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">deck</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">deque</span><span class="p">(</span><span class="n">deck</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">board</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sets</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">deal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cards</span><span class="o">=</span><span class="mi">12</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Deals a given number of cards from the top (front) of the deck.</span>
+
+<span class="sd">        `cards (integer)`: The number of cards to deal out to the board. The default value is `12`.</span>
+
+<span class="sd">        `return (cards[])`: A list (i.e., array) of objects representing cards.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">out</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="n">cards</span><span class="p">):</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">deck</span><span class="o">.</span><span class="n">popleft</span><span class="p">())</span>
+
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span> <span class="nf">play</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Play a (chatty) game of Set.</span>
+
+<span class="sd">        `return (void)`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># pylint: disable=R0915</span>
+
+        <span class="c1"># Introduction</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Welcome to a game of Set.&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;=&gt; Press any key to continue...&quot;</span><span class="p">)</span>
+
+        <span class="c1"># First deal</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Dealing 12 cards onto the board.&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">board</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deal</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+        <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Cards on the board: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Cards in the deck:  {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">deck</span><span class="p">)))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sets discovered:    {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sets</span><span class="p">)))</span>
+        <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;=&gt; Press any key to continue...&quot;</span><span class="p">)</span>
+
+        <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">deck</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># Find sets</span>
+            <span class="k">print</span><span class="p">()</span>
+            <span class="n">sets</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_sets</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Discovered {quantity}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">quantity</span><span class="o">=</span><span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sets</span><span class="p">),</span> <span class="s2">&quot;set&quot;</span><span class="p">,</span> <span class="s2">&quot;sets&quot;</span><span class="p">)</span>
+            <span class="p">))</span>
+
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sset</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sets</span><span class="p">):</span>
+                <span class="k">print</span><span class="p">()</span>
+                <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Set #{index}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span>
+                <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="n">sset</span><span class="p">)</span>
+
+            <span class="k">print</span><span class="p">()</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;These are the remaining {quantity} on the board.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">quantity</span><span class="o">=</span><span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">),</span> <span class="s2">&quot;card&quot;</span><span class="p">,</span> <span class="s2">&quot;cards&quot;</span><span class="p">)</span>
+            <span class="p">))</span>
+            <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sets</span> <span class="o">+=</span> <span class="n">sets</span>
+            <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;=&gt; Press any key to continue...&quot;</span><span class="p">)</span>
+
+            <span class="c1"># Deal 3 more cards</span>
+            <span class="k">print</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">board</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deal</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Dealing 3 more cards. You now have {quantity} on the board.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">quantity</span><span class="o">=</span><span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">),</span> <span class="s2">&quot;card&quot;</span><span class="p">,</span> <span class="s2">&quot;cards&quot;</span><span class="p">)</span>
+            <span class="p">))</span>
+            <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">()</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Cards on the board: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)))</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Cards in the deck:  {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">deck</span><span class="p">)))</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sets discovered:    {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sets</span><span class="p">)))</span>
+            <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;=&gt; Press any key to continue...&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Find the very last set(s)</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="n">sets</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_sets</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Discovered {quantity}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">quantity</span><span class="o">=</span><span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sets</span><span class="p">),</span> <span class="s2">&quot;set&quot;</span><span class="p">,</span> <span class="s2">&quot;sets&quot;</span><span class="p">)</span>
+        <span class="p">))</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sset</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sets</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">()</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Set #{index}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span>
+            <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="n">sset</span><span class="p">)</span>
+
+        <span class="k">print</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;These are the remaining {quantity} on the board.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">quantity</span><span class="o">=</span><span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">),</span> <span class="s2">&quot;card&quot;</span><span class="p">,</span> <span class="s2">&quot;cards&quot;</span><span class="p">)</span>
+        <span class="p">))</span>
+        <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sets</span> <span class="o">+=</span> <span class="n">sets</span>
+        <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;=&gt; Press any key to continue...&quot;</span><span class="p">)</span>
+
+        <span class="c1"># No more cards in the deck.</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;There are no more cards left in the deck.&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;These are the {} that are left on the table.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">),</span> <span class="s2">&quot;card&quot;</span><span class="p">,</span> <span class="s2">&quot;cards&quot;</span><span class="p">)</span>
+        <span class="p">))</span>
+        <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;=&gt; Congratulations! You have completed the game. Press any key to see the results.&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Final score.</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;You discovered {quantity}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">quantity</span><span class="o">=</span><span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sets</span><span class="p">),</span> <span class="s2">&quot;set&quot;</span><span class="p">,</span> <span class="s2">&quot;sets&quot;</span><span class="p">)</span>
+        <span class="p">))</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sset</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sets</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">()</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Set #{index}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span>
+            <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="n">sset</span><span class="p">)</span>
+
+        <span class="c1"># All done.</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Please play again!&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">play_quiet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Play a (quiet) game of Set.</span>
+
+<span class="sd">        `return (tuple(integer, sets[]))`: Returns a tuple where the first item is the number of Sets discovered. The</span>
+<span class="sd">            second item is the complete list of Sets.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">board</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deal</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+
+        <span class="c1"># Find sets and re-deal until we are out of cards.</span>
+        <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">deck</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sets</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_sets</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">board</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deal</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+        <span class="c1"># Find the very last set(s).</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sets</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_sets</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+
+        <span class="c1"># Return a tuple</span>
+        <span class="k">return</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sets</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">sets</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">display_cards</span><span class="p">(</span><span class="n">cards</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Accepts an array of cards, and renders them for humans in a table to `stdout`.</span>
+
+<span class="sd">        `cards (cards[])`: A list (i.e., array) of objects representing cards.</span>
+
+<span class="sd">        `return (void)`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">table</span> <span class="o">=</span> <span class="n">PrettyTable</span><span class="p">([</span><span class="s2">&quot;Number&quot;</span><span class="p">,</span> <span class="s2">&quot;Color&quot;</span><span class="p">,</span> <span class="s2">&quot;Shape&quot;</span><span class="p">,</span> <span class="s2">&quot;Shading&quot;</span><span class="p">])</span>
+
+        <span class="k">for</span> <span class="n">card</span> <span class="ow">in</span> <span class="n">cards</span><span class="p">:</span>
+            <span class="n">table</span><span class="o">.</span><span class="n">add_row</span><span class="p">([</span><span class="n">card</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">],</span> <span class="n">card</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">],</span> <span class="n">card</span><span class="p">[</span><span class="s2">&quot;shape&quot;</span><span class="p">],</span> <span class="n">card</span><span class="p">[</span><span class="s2">&quot;shading&quot;</span><span class="p">]])</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">is_a_set</span><span class="p">(</span><span class="n">card1</span><span class="p">,</span> <span class="n">card2</span><span class="p">,</span> <span class="n">card3</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Determines whether a group of 3 cards is a _set_ or not.</span>
+
+<span class="sd">        `card1 (card)`: A card object to compare against other card objects.</span>
+
+<span class="sd">        `card2 (card)`: A card object to compare against other card objects.</span>
+
+<span class="sd">        `card3 (card)`: A card object to compare against other card objects.</span>
+
+<span class="sd">        `return (boolean)`: Whether or not the given cards represent a _Set_. A value of `True` means that the group is</span>
+<span class="sd">            a set. A value of `False` means that the group is _not_ a set.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">for</span> <span class="n">attribute</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">,</span> <span class="s2">&quot;shape&quot;</span><span class="p">,</span> <span class="s2">&quot;shading&quot;</span><span class="p">,</span> <span class="s2">&quot;number&quot;</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">SetGame</span><span class="o">.</span><span class="n">__all_unique</span><span class="p">([</span>
+                    <span class="n">card1</span><span class="p">[</span><span class="n">attribute</span><span class="p">],</span>
+                    <span class="n">card2</span><span class="p">[</span><span class="n">attribute</span><span class="p">],</span>
+                    <span class="n">card3</span><span class="p">[</span><span class="n">attribute</span><span class="p">],</span>
+                <span class="p">])</span> <span class="ow">is</span> <span class="bp">False</span>
+
+                    <span class="ow">and</span> <span class="n">SetGame</span><span class="o">.</span><span class="n">__all_same</span><span class="p">([</span>
+                        <span class="n">card1</span><span class="p">[</span><span class="n">attribute</span><span class="p">],</span>
+                        <span class="n">card2</span><span class="p">[</span><span class="n">attribute</span><span class="p">],</span>
+                        <span class="n">card3</span><span class="p">[</span><span class="n">attribute</span><span class="p">],</span>
+                    <span class="p">])</span> <span class="ow">is</span> <span class="bp">False</span><span class="p">):</span>
+
+                <span class="k">return</span> <span class="bp">False</span>
+
+        <span class="c1"># Did we actually make it all the way here?</span>
+        <span class="k">return</span> <span class="bp">True</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">find_sets</span><span class="p">(</span><span class="n">board</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Given a _Board_ of cards, determines whether or not it contains a _Set_.</span>
+
+<span class="sd">        `board (cards[])`: A list (i.e., array) of Cards that are on the Board.</span>
+
+<span class="sd">        `return (sets[])`: A list (i.e., array) of Sets. Each Set contains 3 Cards.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">sets</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># Calculate the initial set of combinations.</span>
+        <span class="n">combinations</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">board</span><span class="p">)),</span> <span class="mi">3</span><span class="p">)</span>
+
+        <span class="c1"># Run until we explicitly break.</span>
+        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+
+            <span class="c1"># Grab the combination.</span>
+            <span class="n">combination</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">combinations</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+
+            <span class="c1"># As long as we didn&#39;t get a `None` back...</span>
+            <span class="k">while</span> <span class="n">combination</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+
+                <span class="c1"># Check to see if the three cards we got back for this combination are a Set.</span>
+                <span class="k">if</span> <span class="n">SetGame</span><span class="o">.</span><span class="n">is_a_set</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">2</span><span class="p">]])</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
+
+                    <span class="c1"># If so, save them.</span>
+                    <span class="n">sets</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">2</span><span class="p">]]])</span>
+
+                    <span class="c1"># After we save the Set, remove the cards from the Board.</span>
+                    <span class="c1"># Python list indexes collapse automatically, so remove from the end first.</span>
+                    <span class="k">del</span> <span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
+                    <span class="k">del</span> <span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+                    <span class="k">del</span> <span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+
+                    <span class="c1"># This means that we now need to recalculate the Board, and start our loop over again.</span>
+                    <span class="n">combinations</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">board</span><span class="p">)),</span> <span class="mi">3</span><span class="p">)</span>
+                    <span class="k">break</span>
+
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># Move on to the next combination in the list.</span>
+                    <span class="n">combination</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">combinations</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+                    <span class="k">continue</span>
+
+            <span class="c1"># If we have reached the end of the list of combinations, quit.</span>
+            <span class="k">if</span> <span class="n">combination</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">break</span>
+
+        <span class="c1"># Return all matching sets.</span>
+        <span class="k">return</span> <span class="n">sets</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">__all_unique</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Determines whether or not a `List` of values are all unique.</span>
+
+<span class="sd">        `arr (scalar[])`: A list (i.e., array) of scalar values to compare.</span>
+
+<span class="sd">        `return (boolean)`: Whether or not a `List` of values are all different. A value of `True` means that the values</span>
+<span class="sd">            are all unique. A value of `False` means that the values are not all unique.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">__all_same</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Determines whether or not a `List` of values are all identical.</span>
+
+<span class="sd">        `arr (scalar[])`: A list (i.e., array) of scalar values to compare.</span>
+
+<span class="sd">        `return (boolean)`: Whether or not a `List` of values are all identical. A value of `True` means that the values</span>
+<span class="sd">            are all identical. A value of `False` means that the values are not all identical.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">plural</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">singular</span><span class="p">,</span> <span class="n">plural</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Determines whether a response should be singular or plural, depending on the number of items being referenced.</span>
+
+<span class="sd">        `count (integer)`: The number of items to adjust language for.</span>
+
+<span class="sd">        `singular (string)`: The singular version of the phrasing.</span>
+
+<span class="sd">        `plural (string)`: The plural version of the phrasing.</span>
+
+<span class="sd">        `return (string)`: A properly-formatted string.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="s2">&quot;{count} {word}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">count</span><span class="o">=</span><span class="n">count</span><span class="p">,</span>
+            <span class="n">word</span><span class="o">=</span><span class="n">singular</span>
+        <span class="p">)</span> <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;{count} {word}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">count</span><span class="o">=</span><span class="n">count</span><span class="p">,</span>
+            <span class="n">word</span><span class="o">=</span><span class="n">plural</span>
+        <span class="p">)</span>
+</pre></div>
+
   </div>
 </div>
 
@@ -1984,18 +2059,19 @@ if __name__ == "__main__":  # pragma: no cover
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-set_game_demo.SetGame.display_cards', this);">Show source &equiv;</a></p>
   <div id="source-set_game_demo.SetGame.display_cards" class="source">
-    <pre><code>@staticmethod
-def display_cards(cards):  # pragma: no cover
-    """
-    Accepts an array of cards, and renders them for humans in a table to `stdout`.
-    `cards (cards[])`: A list (i.e., array) of objects representing cards.
-    `return (void)`
-    """
-    table = PrettyTable(["Number", "Color", "Shape", "Shading"])
-    for card in cards:
-        table.add_row([card["number"], card["color"], card["shape"], card["shading"]])
-    print(table)
-</code></pre>
+    <div class="codehilite"><pre><span></span><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">display_cards</span><span class="p">(</span><span class="n">cards</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Accepts an array of cards, and renders them for humans in a table to `stdout`.</span>
+<span class="sd">    `cards (cards[])`: A list (i.e., array) of objects representing cards.</span>
+<span class="sd">    `return (void)`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="n">PrettyTable</span><span class="p">([</span><span class="s2">&quot;Number&quot;</span><span class="p">,</span> <span class="s2">&quot;Color&quot;</span><span class="p">,</span> <span class="s2">&quot;Shape&quot;</span><span class="p">,</span> <span class="s2">&quot;Shading&quot;</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">card</span> <span class="ow">in</span> <span class="n">cards</span><span class="p">:</span>
+        <span class="n">table</span><span class="o">.</span><span class="n">add_row</span><span class="p">([</span><span class="n">card</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">],</span> <span class="n">card</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">],</span> <span class="n">card</span><span class="p">[</span><span class="s2">&quot;shape&quot;</span><span class="p">],</span> <span class="n">card</span><span class="p">[</span><span class="s2">&quot;shading&quot;</span><span class="p">]])</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+</pre></div>
+
   </div>
 </div>
 
@@ -2016,44 +2092,45 @@ def display_cards(cards):  # pragma: no cover
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-set_game_demo.SetGame.find_sets', this);">Show source &equiv;</a></p>
   <div id="source-set_game_demo.SetGame.find_sets" class="source">
-    <pre><code>@staticmethod
-def find_sets(board):
-    """
-    Given a _Board_ of cards, determines whether or not it contains a _Set_.
-    `board (cards[])`: A list (i.e., array) of Cards that are on the Board.
-    `return (sets[])`: A list (i.e., array) of Sets. Each Set contains 3 Cards.
-    """
-    sets = []
-    # Calculate the initial set of combinations.
-    combinations = itertools.combinations(six.moves.range(len(board)), 3)
-    # Run until we explicitly break.
-    while True:
-        # Grab the combination.
-        combination = next(combinations, None)
-        # As long as we didn't get a `None` back...
-        while combination is not None:
-            # Check to see if the three cards we got back for this combination are a Set.
-            if SetGame.is_a_set(board[combination[0]], board[combination[1]], board[combination[2]]) is True:
-                # If so, save them.
-                sets.append([board[combination[0]], board[combination[1]], board[combination[2]]])
-                # After we save the Set, remove the cards from the Board.
-                # Python list indexes collapse automatically, so remove from the end first.
-                del board[combination[2]]
-                del board[combination[1]]
-                del board[combination[0]]
-                # This means that we now need to recalculate the Board, and start our loop over again.
-                combinations = itertools.combinations(six.moves.range(len(board)), 3)
-                break
-            else:
-                # Move on to the next combination in the list.
-                combination = next(combinations, None)
-                continue
-        # If we have reached the end of the list of combinations, quit.
-        if combination is None:
-            break
-    # Return all matching sets.
-    return sets
-</code></pre>
+    <div class="codehilite"><pre><span></span><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">find_sets</span><span class="p">(</span><span class="n">board</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Given a _Board_ of cards, determines whether or not it contains a _Set_.</span>
+<span class="sd">    `board (cards[])`: A list (i.e., array) of Cards that are on the Board.</span>
+<span class="sd">    `return (sets[])`: A list (i.e., array) of Sets. Each Set contains 3 Cards.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">sets</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># Calculate the initial set of combinations.</span>
+    <span class="n">combinations</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">board</span><span class="p">)),</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="c1"># Run until we explicitly break.</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="c1"># Grab the combination.</span>
+        <span class="n">combination</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">combinations</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+        <span class="c1"># As long as we didn&#39;t get a `None` back...</span>
+        <span class="k">while</span> <span class="n">combination</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="c1"># Check to see if the three cards we got back for this combination are a Set.</span>
+            <span class="k">if</span> <span class="n">SetGame</span><span class="o">.</span><span class="n">is_a_set</span><span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">2</span><span class="p">]])</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
+                <span class="c1"># If so, save them.</span>
+                <span class="n">sets</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">2</span><span class="p">]]])</span>
+                <span class="c1"># After we save the Set, remove the cards from the Board.</span>
+                <span class="c1"># Python list indexes collapse automatically, so remove from the end first.</span>
+                <span class="k">del</span> <span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span>
+                <span class="k">del</span> <span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+                <span class="k">del</span> <span class="n">board</span><span class="p">[</span><span class="n">combination</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+                <span class="c1"># This means that we now need to recalculate the Board, and start our loop over again.</span>
+                <span class="n">combinations</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">board</span><span class="p">)),</span> <span class="mi">3</span><span class="p">)</span>
+                <span class="k">break</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># Move on to the next combination in the list.</span>
+                <span class="n">combination</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">combinations</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+                <span class="k">continue</span>
+        <span class="c1"># If we have reached the end of the list of combinations, quit.</span>
+        <span class="k">if</span> <span class="n">combination</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">break</span>
+    <span class="c1"># Return all matching sets.</span>
+    <span class="k">return</span> <span class="n">sets</span>
+</pre></div>
+
   </div>
 </div>
 
@@ -2077,32 +2154,32 @@ def find_sets(board):
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-set_game_demo.SetGame.is_a_set', this);">Show source &equiv;</a></p>
   <div id="source-set_game_demo.SetGame.is_a_set" class="source">
-    <pre><code>@staticmethod
-def is_a_set(card1, card2, card3):
-    """
-    Determines whether a group of 3 cards is a _set_ or not.
-    `card1 (card)`: A card object to compare against other card objects.
-    `card2 (card)`: A card object to compare against other card objects.
-    `card3 (card)`: A card object to compare against other card objects.
-    `return (boolean)`: Whether or not the given cards represent a _Set_. A value of `True` means that the group is
-        a set. A value of `False` means that the group is _not_ a set.
-    """
-    for attribute in ["color", "shape", "shading", "number"]:
-        if (SetGame.__all_unique([
-                card1[attribute],
-                card2[attribute],
-                card3[attribute],
-            ]) is False
-                and
-                SetGame.__all_same([
-                    card1[attribute],
-                    card2[attribute],
-                    card3[attribute],
-                ]) is False):
-            return False
-    # Did we actually make it all the way here?
-    return True
-</code></pre>
+    <div class="codehilite"><pre><span></span><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">is_a_set</span><span class="p">(</span><span class="n">card1</span><span class="p">,</span> <span class="n">card2</span><span class="p">,</span> <span class="n">card3</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Determines whether a group of 3 cards is a _set_ or not.</span>
+<span class="sd">    `card1 (card)`: A card object to compare against other card objects.</span>
+<span class="sd">    `card2 (card)`: A card object to compare against other card objects.</span>
+<span class="sd">    `card3 (card)`: A card object to compare against other card objects.</span>
+<span class="sd">    `return (boolean)`: Whether or not the given cards represent a _Set_. A value of `True` means that the group is</span>
+<span class="sd">        a set. A value of `False` means that the group is _not_ a set.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">attribute</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">,</span> <span class="s2">&quot;shape&quot;</span><span class="p">,</span> <span class="s2">&quot;shading&quot;</span><span class="p">,</span> <span class="s2">&quot;number&quot;</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">SetGame</span><span class="o">.</span><span class="n">__all_unique</span><span class="p">([</span>
+                <span class="n">card1</span><span class="p">[</span><span class="n">attribute</span><span class="p">],</span>
+                <span class="n">card2</span><span class="p">[</span><span class="n">attribute</span><span class="p">],</span>
+                <span class="n">card3</span><span class="p">[</span><span class="n">attribute</span><span class="p">],</span>
+            <span class="p">])</span> <span class="ow">is</span> <span class="bp">False</span>
+                <span class="ow">and</span> <span class="n">SetGame</span><span class="o">.</span><span class="n">__all_same</span><span class="p">([</span>
+                    <span class="n">card1</span><span class="p">[</span><span class="n">attribute</span><span class="p">],</span>
+                    <span class="n">card2</span><span class="p">[</span><span class="n">attribute</span><span class="p">],</span>
+                    <span class="n">card3</span><span class="p">[</span><span class="n">attribute</span><span class="p">],</span>
+                <span class="p">])</span> <span class="ow">is</span> <span class="bp">False</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">False</span>
+    <span class="c1"># Did we actually make it all the way here?</span>
+    <span class="k">return</span> <span class="bp">True</span>
+</pre></div>
+
   </div>
 </div>
 
@@ -2125,23 +2202,24 @@ def is_a_set(card1, card2, card3):
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-set_game_demo.SetGame.plural', this);">Show source &equiv;</a></p>
   <div id="source-set_game_demo.SetGame.plural" class="source">
-    <pre><code>@staticmethod
-def plural(count, singular, plural):
-    """
-    Determines whether a response should be singular or plural, depending on the number of items being referenced.
-    `count (integer)`: The number of items to adjust language for.
-    `singular (string)`: The singular version of the phrasing.
-    `plural (string)`: The plural version of the phrasing.
-    `return (string)`: A properly-formatted string.
-    """
-    return "{count} {word}".format(
-        count=count,
-        word=singular
-    ) if count == 1 else "{count} {word}".format(
-        count=count,
-        word=plural
-    )
-</code></pre>
+    <div class="codehilite"><pre><span></span><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">plural</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">singular</span><span class="p">,</span> <span class="n">plural</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Determines whether a response should be singular or plural, depending on the number of items being referenced.</span>
+<span class="sd">    `count (integer)`: The number of items to adjust language for.</span>
+<span class="sd">    `singular (string)`: The singular version of the phrasing.</span>
+<span class="sd">    `plural (string)`: The plural version of the phrasing.</span>
+<span class="sd">    `return (string)`: A properly-formatted string.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;{count} {word}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="n">count</span><span class="o">=</span><span class="n">count</span><span class="p">,</span>
+        <span class="n">word</span><span class="o">=</span><span class="n">singular</span>
+    <span class="p">)</span> <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;{count} {word}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="n">count</span><span class="o">=</span><span class="n">count</span><span class="p">,</span>
+        <span class="n">word</span><span class="o">=</span><span class="n">plural</span>
+    <span class="p">)</span>
+</pre></div>
+
   </div>
 </div>
 
@@ -2232,30 +2310,31 @@ def plural(count, singular, plural):
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-set_game_demo.SetGame.__init__', this);">Show source &equiv;</a></p>
   <div id="source-set_game_demo.SetGame.__init__" class="source">
-    <pre><code>def __init__(self):
-    """
-    Constructs a new instance of this class.
-    """
-    self.colors = ["red", "green", "purple"]
-    self.shapes = ["diamond", "squiggle", "oval"]
-    self.shadings = ["solid", "empty", "striped"]
-    self.numbers = ["one", "two", "three"]
-    deck = []
-    for color in self.colors:
-        for shape in self.shapes:
-            for shading in self.shadings:
-                for number in self.numbers:
-                    card = {}
-                    card["color"] = color
-                    card["shape"] = shape
-                    card["shading"] = shading
-                    card["number"] = number
-                    deck.append(card)
-    random.shuffle(deck)
-    self.deck = collections.deque(deck)
-    self.board = []
-    self.sets = []
-</code></pre>
+    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Constructs a new instance of this class.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;purple&quot;</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">shapes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;diamond&quot;</span><span class="p">,</span> <span class="s2">&quot;squiggle&quot;</span><span class="p">,</span> <span class="s2">&quot;oval&quot;</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">shadings</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;solid&quot;</span><span class="p">,</span> <span class="s2">&quot;empty&quot;</span><span class="p">,</span> <span class="s2">&quot;striped&quot;</span><span class="p">]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="s2">&quot;three&quot;</span><span class="p">]</span>
+    <span class="n">deck</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">colors</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">shape</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">shapes</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">shading</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">shadings</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">numbers</span><span class="p">:</span>
+                    <span class="n">card</span> <span class="o">=</span> <span class="p">{}</span>
+                    <span class="n">card</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">color</span>
+                    <span class="n">card</span><span class="p">[</span><span class="s2">&quot;shape&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">shape</span>
+                    <span class="n">card</span><span class="p">[</span><span class="s2">&quot;shading&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">shading</span>
+                    <span class="n">card</span><span class="p">[</span><span class="s2">&quot;number&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">number</span>
+                    <span class="n">deck</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">card</span><span class="p">)</span>
+    <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">deck</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">deck</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">deque</span><span class="p">(</span><span class="n">deck</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">board</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">sets</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+
   </div>
 </div>
 
@@ -2276,17 +2355,18 @@ def plural(count, singular, plural):
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-set_game_demo.SetGame.deal', this);">Show source &equiv;</a></p>
   <div id="source-set_game_demo.SetGame.deal" class="source">
-    <pre><code>def deal(self, cards=12):
-    """
-    Deals a given number of cards from the top (front) of the deck.
-    `cards (integer)`: The number of cards to deal out to the board. The default value is `12`.
-    `return (cards[])`: A list (i.e., array) of objects representing cards.
-    """
-    out = []
-    for _ in six.moves.range(cards):
-        out.append(self.deck.popleft())
-    return out
-</code></pre>
+    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">deal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cards</span><span class="o">=</span><span class="mi">12</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Deals a given number of cards from the top (front) of the deck.</span>
+<span class="sd">    `cards (integer)`: The number of cards to deal out to the board. The default value is `12`.</span>
+<span class="sd">    `return (cards[])`: A list (i.e., array) of objects representing cards.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">range</span><span class="p">(</span><span class="n">cards</span><span class="p">):</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">deck</span><span class="o">.</span><span class="n">popleft</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">out</span>
+</pre></div>
+
   </div>
 </div>
 
@@ -2306,99 +2386,100 @@ def plural(count, singular, plural):
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-set_game_demo.SetGame.play', this);">Show source &equiv;</a></p>
   <div id="source-set_game_demo.SetGame.play" class="source">
-    <pre><code>def play(self):  # pragma: no cover
-    """
-    Play a (chatty) game of Set.
-    `return (void)`
-    """
-    # pylint: disable=R0915
-    # Introduction
-    print("Welcome to a game of Set.")
-    print()
-    six.moves.input("=> Press any key to continue...")
-    # First deal
-    print()
-    print("Dealing 12 cards onto the board.")
-    self.board = self.deal(12)
-    SetGame.display_cards(self.board)
-    print()
-    print("Cards on the board: {}".format(len(self.board)))
-    print("Cards in the deck:  {}".format(len(self.deck)))
-    print("Sets discovered:    {}".format(len(self.sets)))
-    six.moves.input("=> Press any key to continue...")
-    while len(self.deck) > 0:
-        # Find sets
-        print()
-        sets = self.find_sets(self.board)
-        print("Discovered {quantity}.".format(
-            quantity=SetGame.plural(len(sets), "set", "sets")
-        ))
-        for i, sset in enumerate(sets):
-            print()
-            print("Set #{index}".format(index=(i + 1)))
-            SetGame.display_cards(sset)
-        print()
-        print("These are the remaining {quantity} on the board.".format(
-            quantity=SetGame.plural(len(self.board), "card", "cards")
-        ))
-        SetGame.display_cards(self.board)
-        print()
-        self.sets += sets
-        six.moves.input("=> Press any key to continue...")
-        # Deal 3 more cards
-        print()
-        self.board += self.deal(3)
-        print("Dealing 3 more cards. You now have {quantity} on the board.".format(
-            quantity=SetGame.plural(len(self.board), "card", "cards")
-        ))
-        SetGame.display_cards(self.board)
-        print()
-        print("Cards on the board: {}".format(len(self.board)))
-        print("Cards in the deck:  {}".format(len(self.deck)))
-        print("Sets discovered:    {}".format(len(self.sets)))
-        six.moves.input("=> Press any key to continue...")
-    # Find the very last set(s)
-    print()
-    sets = self.find_sets(self.board)
-    print("Discovered {quantity}.".format(
-        quantity=SetGame.plural(len(sets), "set", "sets")
-    ))
-    for i, sset in enumerate(sets):
-        print()
-        print("Set #{index}".format(index=(i + 1)))
-        SetGame.display_cards(sset)
-    print()
-    print("These are the remaining {quantity} on the board.".format(
-        quantity=SetGame.plural(len(self.board), "card", "cards")
-    ))
-    SetGame.display_cards(self.board)
-    print()
-    self.sets += sets
-    six.moves.input("=> Press any key to continue...")
-    # No more cards in the deck.
-    print()
-    print("There are no more cards left in the deck.")
-    print()
-    print("These are the {} that are left on the table.".format(
-        SetGame.plural(len(self.board), "card", "cards")
-    ))
-    SetGame.display_cards(self.board)
-    print()
-    six.moves.input("=> Congratulations! You have completed the game. Press any key to see the results.")
-    # Final score.
-    print()
-    print("You discovered {quantity}.".format(
-        quantity=SetGame.plural(len(self.sets), "set", "sets")
-    ))
-    for i, sset in enumerate(self.sets):
-        print()
-        print("Set #{index}".format(index=(i + 1)))
-        SetGame.display_cards(sset)
-    # All done.
-    print()
-    print("Please play again!")
-    print()
-</code></pre>
+    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">play</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Play a (chatty) game of Set.</span>
+<span class="sd">    `return (void)`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># pylint: disable=R0915</span>
+    <span class="c1"># Introduction</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Welcome to a game of Set.&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">()</span>
+    <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;=&gt; Press any key to continue...&quot;</span><span class="p">)</span>
+    <span class="c1"># First deal</span>
+    <span class="k">print</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Dealing 12 cards onto the board.&quot;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">board</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deal</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Cards on the board: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Cards in the deck:  {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">deck</span><span class="p">)))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sets discovered:    {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sets</span><span class="p">)))</span>
+    <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;=&gt; Press any key to continue...&quot;</span><span class="p">)</span>
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">deck</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="c1"># Find sets</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="n">sets</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_sets</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Discovered {quantity}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">quantity</span><span class="o">=</span><span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sets</span><span class="p">),</span> <span class="s2">&quot;set&quot;</span><span class="p">,</span> <span class="s2">&quot;sets&quot;</span><span class="p">)</span>
+        <span class="p">))</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sset</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sets</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">()</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Set #{index}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span>
+            <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="n">sset</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;These are the remaining {quantity} on the board.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">quantity</span><span class="o">=</span><span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">),</span> <span class="s2">&quot;card&quot;</span><span class="p">,</span> <span class="s2">&quot;cards&quot;</span><span class="p">)</span>
+        <span class="p">))</span>
+        <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sets</span> <span class="o">+=</span> <span class="n">sets</span>
+        <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;=&gt; Press any key to continue...&quot;</span><span class="p">)</span>
+        <span class="c1"># Deal 3 more cards</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">board</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deal</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Dealing 3 more cards. You now have {quantity} on the board.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">quantity</span><span class="o">=</span><span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">),</span> <span class="s2">&quot;card&quot;</span><span class="p">,</span> <span class="s2">&quot;cards&quot;</span><span class="p">)</span>
+        <span class="p">))</span>
+        <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Cards on the board: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Cards in the deck:  {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">deck</span><span class="p">)))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sets discovered:    {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sets</span><span class="p">)))</span>
+        <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;=&gt; Press any key to continue...&quot;</span><span class="p">)</span>
+    <span class="c1"># Find the very last set(s)</span>
+    <span class="k">print</span><span class="p">()</span>
+    <span class="n">sets</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_sets</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Discovered {quantity}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="n">quantity</span><span class="o">=</span><span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sets</span><span class="p">),</span> <span class="s2">&quot;set&quot;</span><span class="p">,</span> <span class="s2">&quot;sets&quot;</span><span class="p">)</span>
+    <span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sset</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sets</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Set #{index}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span>
+        <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="n">sset</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;These are the remaining {quantity} on the board.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="n">quantity</span><span class="o">=</span><span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">),</span> <span class="s2">&quot;card&quot;</span><span class="p">,</span> <span class="s2">&quot;cards&quot;</span><span class="p">)</span>
+    <span class="p">))</span>
+    <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">sets</span> <span class="o">+=</span> <span class="n">sets</span>
+    <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;=&gt; Press any key to continue...&quot;</span><span class="p">)</span>
+    <span class="c1"># No more cards in the deck.</span>
+    <span class="k">print</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;There are no more cards left in the deck.&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;These are the {} that are left on the table.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">),</span> <span class="s2">&quot;card&quot;</span><span class="p">,</span> <span class="s2">&quot;cards&quot;</span><span class="p">)</span>
+    <span class="p">))</span>
+    <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">()</span>
+    <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;=&gt; Congratulations! You have completed the game. Press any key to see the results.&quot;</span><span class="p">)</span>
+    <span class="c1"># Final score.</span>
+    <span class="k">print</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;You discovered {quantity}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="n">quantity</span><span class="o">=</span><span class="n">SetGame</span><span class="o">.</span><span class="n">plural</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sets</span><span class="p">),</span> <span class="s2">&quot;set&quot;</span><span class="p">,</span> <span class="s2">&quot;sets&quot;</span><span class="p">)</span>
+    <span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sset</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sets</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Set #{index}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span>
+        <span class="n">SetGame</span><span class="o">.</span><span class="n">display_cards</span><span class="p">(</span><span class="n">sset</span><span class="p">)</span>
+    <span class="c1"># All done.</span>
+    <span class="k">print</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Please play again!&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">()</span>
+</pre></div>
+
   </div>
 </div>
 
@@ -2419,22 +2500,23 @@ def plural(count, singular, plural):
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-set_game_demo.SetGame.play_quiet', this);">Show source &equiv;</a></p>
   <div id="source-set_game_demo.SetGame.play_quiet" class="source">
-    <pre><code>def play_quiet(self):
-    """
-    Play a (quiet) game of Set.
-    `return (tuple(integer, sets[]))`: Returns a tuple where the first item is the number of Sets discovered. The
-        second item is the complete list of Sets.
-    """
-    self.board = self.deal(12)
-    # Find sets and re-deal until we are out of cards.
-    while len(self.deck) > 0:
-        self.sets += self.find_sets(self.board)
-        self.board += self.deal(3)
-    # Find the very last set(s).
-    self.sets += self.find_sets(self.board)
-    # Return a tuple
-    return (len(self.sets), self.sets)
-</code></pre>
+    <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">play_quiet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Play a (quiet) game of Set.</span>
+<span class="sd">    `return (tuple(integer, sets[]))`: Returns a tuple where the first item is the number of Sets discovered. The</span>
+<span class="sd">        second item is the complete list of Sets.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">board</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deal</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+    <span class="c1"># Find sets and re-deal until we are out of cards.</span>
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">deck</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sets</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_sets</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">board</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deal</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="c1"># Find the very last set(s).</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">sets</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_sets</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">board</span><span class="p">)</span>
+    <span class="c1"># Return a tuple</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sets</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">sets</span><span class="p">)</span>
+</pre></div>
+
   </div>
 </div>
 
