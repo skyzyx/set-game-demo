@@ -1,7 +1,11 @@
-Demo of the game of "Set"
-===
+.. _demo-of-the-game-of-"set":
 
-|Source| |Downloads| |Release| |Pypi Release| |Open Issues| |Build Status| |Implementation| |Python Versions| |Package Format| |Stability| |Coverage Status| |Code Climate| |Code Quality| |License| |Author|
+Demo of the game of "Set"
+=========================
+
+|Source| |Downloads| |Release| |Pypi Release| |Open Issues| |Build
+Status| |Implementation| |Python Versions| |Package Format| |Stability|
+|Coverage Status| |Code Climate| |Code Quality| |License| |Author|
 
 "Set" is a card game where a group of players try to identify a *Set* of
 cards from those placed face-up on a table.
@@ -43,21 +47,19 @@ are all the same or all different.
 For example:
 
 -  The *Cards* "two red solid squiggles", "one green solid diamond",
-   "three purple solid ovals" would make up a
-   *Set*. (number, shape, and color are different, shading is the same)
+   "three purple solid ovals" would make up a *Set*. (number, shape, and
+   color are different, shading is the same)
 -  The *Cards* "two red solid squiggles", "one green solid squiggles",
-   "three purple solid ovals" would not make up a
-   *Set*, because shape is the same on two *Cards*, but different on the
-   third.
+   "three purple solid ovals" would not make up a *Set*, because shape
+   is the same on two *Cards*, but different on the third.
 -  A *Game* of "Set" starts by dealing 12 *Cards*, face-up. When a
-   player sees three *Cards* that make up a *Set*,
-   they yell "Set!" and grab the *Cards*. New *Cards* are dealt from the
-   *Deck* to replace them.
+   player sees three *Cards* that make up a *Set*, they yell "Set!" and
+   grab the *Cards*. New *Cards* are dealt from the *Deck* to replace
+   them.
 -  If no player can find a *Set*, three more *Cards* are dealt (to make
    15, then 18, then 21...)
 -  The *Game* is over when there are no *Cards* left in the *Deck*, and
-   no *Sets* left on the table. The player with
-   the most *Sets* wins.
+   no *Sets* left on the table. The player with the most *Sets* wins.
 
 Game Requirements
 ~~~~~~~~~~~~~~~~~
@@ -68,11 +70,10 @@ methods:
 -  A method that takes three *Cards*, and determines whether the three
    *Cards* make a *Set*.
 -  A method that given a *Board* of *Cards*, will either find a *Set*,
-   or determine that there are no *Sets* on the
-   table.
+   or determine that there are no *Sets* on the table.
 -  A method that will play an entire *Game* of "Set", from beginning to
-   end, and return a list of each valid *Sets*
-   you removed from the *Board*.
+   end, and return a list of each valid *Sets* you removed from the
+   *Board*.
 
 For this last method, there will be multiple correct solutions, but any
 valid list of *Sets* is fine.
@@ -80,8 +81,8 @@ valid list of *Sets* is fine.
 Assumptions
 ~~~~~~~~~~~
 
-    *“Three cards are a part of a set if, for each property, the values
-    are all the same or all different.”*
+   *“Three cards are a part of a set if, for each property, the values
+   are all the same or all different.”*
 
 This is phrased ambiguously, and the examples given lead me to believe
 that the following is a more specific description of the rules.
@@ -106,19 +107,19 @@ Logic
 (Whereas “\ *Combination*\ ” refers to the `mathematical
 concept <https://en.wikipedia.org/wiki/Combination>`__.)
 
-#. Create the deck of available cards by ensuring that every card is
+1. Create the deck of available cards by ensuring that every card is
    unique, and that all *Combinations* of properties are represented.
    Also, shuffle the deck by default.
-#. Deal 12 cards to the *Board*.
-#. Calculate all possible *Combinations* of the cards on the *Board*, in
+2. Deal 12 cards to the *Board*.
+3. Calculate all possible *Combinations* of the cards on the *Board*, in
    groups of 3.
-#. Iterate over each *Combination*, applying logic to determine whether
+4. Iterate over each *Combination*, applying logic to determine whether
    or not this *Combination* represents a *Set*.
-#. Collect the *Sets* by removing the *Cards* which are determined to be
+5. Collect the *Sets* by removing the *Cards* which are determined to be
    part of a *Set*.
-#. When no more *Sets* can be found, deal another 3 *Cards* from the
+6. When no more *Sets* can be found, deal another 3 *Cards* from the
    *Deck*.
-#. Repeat steps 3–6 until the *Deck* is empty.
+7. Repeat steps 3–6 until the *Deck* is empty.
 
 Requirements
 ------------
@@ -132,24 +133,26 @@ Installation
 
 .. code:: bash
 
-    # Install from Pypi
-    pip install skyzyx-set-game-demo
+   # Install from Pypi
+   pip install skyzyx-set-game-demo
 
-    # Install from local code
-    pip install -e .
+   # Install from local code
+   pip install -e .
 
 And either include it in your scripts:
 
 .. code:: python
 
-    from set_game_demo import SetGame
+   from set_game_demo import SetGame
 
 …or run it from the command line.
 
 .. code:: bash
 
-    # Application help
-    set-game-demo -h
+   # Application help
+   set-game-demo -h
+
+.. _usage/examples:
 
 Usage/Examples
 --------------
@@ -158,30 +161,30 @@ From the Python REPL or a Python script…
 
 .. code:: python
 
-    from __future__ import print_function
-    from set_game_demo import SetGame
+   from __future__ import print_function
+   from set_game_demo import SetGame
 
-    # Initialize the game.
-    game = SetGame()
+   # Initialize the game.
+   game = SetGame()
 
-    # Chatty, interactive version of the game.
-    game.play()
+   # Chatty, interactive version of the game.
+   game.play()
 
-    # Quiet version of the game. Good for code.
-    discovered, sets = game.play_quiet()
-    print("Sets discovered: {}".format(discovered))
-    for set in sets:
-        game.display_cards(set)
+   # Quiet version of the game. Good for code.
+   discovered, sets = game.play_quiet()
+   print("Sets discovered: {}".format(discovered))
+   for set in sets:
+       game.display_cards(set)
 
 From the Terminal…
 
 .. code:: bash
 
-    # Chatty, interactive version of the game.
-    set-game-demo
+   # Chatty, interactive version of the game.
+   set-game-demo
 
-    # Quiet version of the game.
-    set-game-demo --quiet
+   # Quiet version of the game.
+   set-game-demo --quiet
 
 Known Issues
 ------------
@@ -215,7 +218,7 @@ Development
 -  Install `VirtualEnv <https://virtualenv.pypa.io/en/stable/>`__ for
    your development environment, and *activate* the environment.
 
-  .. code:: bash
+   .. code:: bash
 
       pip install virtualenv
       virtualenv .vendor
@@ -223,14 +226,14 @@ Development
 
 -  Install the ``requirements.txt``.
 
-  .. code:: bash
+   .. code:: bash
 
       pip install -r requirements.txt
 
 -  When you make changes, make sure that you run the linter and fix
    anything that's broken.
 
-  .. code:: bash
+   .. code:: bash
 
       make lint
 
@@ -253,32 +256,33 @@ Testing occurs against the following versions:
 
 To begin…
 
-#. Install `pyenv <https://github.com/yyuu/pyenv>`__ on your own before
+1. Install `pyenv <https://github.com/yyuu/pyenv>`__ on your own before
    running tests.
 
-#. You need to install all of the supported versions of Python. (This
+2. You need to install all of the supported versions of Python. (This
    will take a while.) If you would prefer to install your own copies of
    the supported Python versions (listed above), feel free to manage
    them yourself.
 
-  .. code:: bash
+   .. code:: bash
 
-      pyenv install 3.6.0b1 && \
-      pyenv install 3.5.2 && \
-      pyenv install 3.4.5 && \
-      pyenv install 3.3.6 && \
-      pyenv install 2.7.12 && \
-      pyenv install pypy-5.3.1 && \
-      pyenv install pypy3-2.4.0 && \
+      pyenv install 3.7.1 && \
+      pyenv install 3.6.7 && \
+      pyenv install 3.5.6 && \
+      pyenv install 3.4.9 && \
+      pyenv install 3.3.7 && \
+      pyenv install 2.7.15 && \
+      pyenv install pypy-5.7.1 && \
+      pyenv install pypy3.5-6.0.0 && \
       pyenv rehash && \
       eval "$(pyenv init -)" && \
-      pyenv global system 3.6.0b1 3.5.2 3.4.5 3.3.6 2.7.12 pypy-5.3.1 pypy3-2.4.0
+      pyenv global system 2.7.15 3.3.7 3.4.9 3.5.6 3.6.7 3.7.1 pypy-5.7.1 pypy3.5-6.0.0
 
-To verify that the installation and configuration were successful, you
-can run ``pyenv versions``. You should see a ``*`` character in front of
-every version that we just installed.
+   To verify that the installation and configuration were successful,
+   you can run ``pyenv versions``. You should see a ``*`` character in
+   front of every version that we just installed.
 
-  .. code:: bash
+   .. code:: bash
 
       $ pyenv versions
       * system (set by ~/.pyenv/version)
@@ -290,18 +294,18 @@ every version that we just installed.
       * pypy-5.3.1 (set by ~/.pyenv/version)
       * pypy3-2.4.0 (set by ~/.pyenv/version)
 
-#. The following command will package-up your module and install it
+3. The following command will package-up your module and install it
    locally, then run ``nose2`` to execute the tests in the *default
    system Python*.
 
-  .. code:: bash
+   .. code:: bash
 
       make test
 
-#. After you've run that, you can then execute the tests in all
+4. After you've run that, you can then execute the tests in all
    supported versions of Python with the following:
 
-  .. code:: bash
+   .. code:: bash
 
       tox
 
@@ -313,24 +317,25 @@ Building local docs
 
 .. code:: bash
 
-    make docs
-    open docs/set_game_demo/index.html
+   make docs
+   open docs/set_game_demo/index.html
 
 Building and pushing docs
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code:: bash
 
-    make pushdocs
+   make pushdocs
 
-Docs can be viewed at https://skyzyx.github.io/set-game-demo/.
+Docs can be viewed at
+`https://skyzyx.github.io/set-game-demo/ <https://skyzyx.github.io/set-game-demo/>`__.
 
 Deploying
 ---------
 
-#. The ``Makefile`` (yes, ``Makefile``) has a series of commands to
+1. The ``Makefile`` (yes, ``Makefile``) has a series of commands to
    simplify the development and deployment process.
-#. Also install `Chag <https://github.com/mtdowling/chag>`__. This is
+2. Also install `Chag <https://github.com/mtdowling/chag>`__. This is
    used for managing the ``CHANGELOG`` and annotating the Git release
    correctly.
 
@@ -338,7 +343,8 @@ Updating the CHANGELOG
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Make sure that the ``CHANGELOG.md`` is human-friendly. See
-http://keepachangelog.com if you don’t know how.
+`http://keepachangelog.com <http://keepachangelog.com>`__ if you don’t
+know how.
 
 ``make``
 ~~~~~~~~
@@ -348,18 +354,18 @@ sub-commands.
 
 .. code:: bash
 
-    $ make
-    all
-    buildpip
-    clean
-    docs
-    lint
-    pushdocs
-    pushpip
-    readme
-    tag
-    test
-    version
+   $ make
+   all
+   buildpip
+   clean
+   docs
+   lint
+   pushdocs
+   pushpip
+   readme
+   tag
+   test
+   version
 
 ``make readme``
 ~~~~~~~~~~~~~~~
@@ -374,10 +380,10 @@ used by
 You must have `Pandoc <http://pandoc.org>`__ installed on your local
 system.
 
-    **NOTE:** Initial install via ``brew install pandoc`` takes about
-    8–10 hours. Updates are much faster. `Using the
-    installer <https://github.com/jgm/pandoc/releases>`__ is **much**
-    faster for initial installation, but updates are entirely manual.
+   **NOTE:** Initial install via ``brew install pandoc`` takes about
+   8–10 hours. Updates are much faster. `Using the
+   installer <https://github.com/jgm/pandoc/releases>`__ is **much**
+   faster for initial installation, but updates are entirely manual.
 
 ``make version``
 ~~~~~~~~~~~~~~~~
@@ -407,34 +413,37 @@ This will take your bundled package and upload it securely to
 Drafting a GitHub release
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Go to https://github.com/skyzyx/set-game-demo/tags
-#. Find the new tag that you just pushed. Click the ellipsis (``…``) to
+1. Go to
+   `https://github.com/skyzyx/set-game-demo/tags <https://github.com/skyzyx/set-game-demo/tags>`__
+2. Find the new tag that you just pushed. Click the ellipsis (``…``) to
    see the commit notes. Copy these.
-#. To the right, choose *Add release notes*. Your *Tag version* should
+3. To the right, choose *Add release notes*. Your *Tag version* should
    be pre-filled.
-#. The *Release title* should match your *Tag version*.
-#. Inside *Describe this release*, paste the notes that you copied on
+4. The *Release title* should match your *Tag version*.
+5. Inside *Describe this release*, paste the notes that you copied on
    the previous page.
-#. Choose *Publish release*.
-#. Your release should now be the latest.
-   https://github.com/skyzyx/set-game-demo/releases/latest
+6. Choose *Publish release*.
+7. Your release should now be the latest.
+   `https://github.com/skyzyx/set-game-demo/releases/latest <https://github.com/skyzyx/set-game-demo/releases/latest>`__
 
 Contributing
 ------------
 
 Here's the process for contributing:
 
-#. Fork this project to your GitHub account.
-#. Clone your GitHub copy of the repository into your local workspace.
-#. Write code, fix bugs, and add tests with 100% code coverage.
-#. Commit your changes to your local workspace and push them up to your
+1. Fork this project to your GitHub account.
+2. Clone your GitHub copy of the repository into your local workspace.
+3. Write code, fix bugs, and add tests with 100% code coverage.
+4. Commit your changes to your local workspace and push them up to your
    GitHub copy.
-#. You submit a GitHub pull request with a description of what the
+5. You submit a GitHub pull request with a description of what the
    change is.
-#. The contribution is reviewed. Maybe there will be some banter
+6. The contribution is reviewed. Maybe there will be some banter
    back-and-forth in the comments.
-#. If all goes well, your pull request will be accepted and your changes
+7. If all goes well, your pull request will be accepted and your changes
    are merged in.
+
+.. _authors,-copyright-&-licensing:
 
 Authors, Copyright & Licensing
 ------------------------------

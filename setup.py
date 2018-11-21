@@ -8,11 +8,11 @@ version = open('VERSION').read()
 
 # Runtime requirements (which are different from development requirements)
 requires = [
-    'autoflake==0.6.6',
-    'autopep8==1.2.4',
-    'prettytable==0.7.2',
-    'pylint==1.6.4',
-    'six==1.10.0',
+    'autoflake>=0.6.6,<1.0',
+    'autopep8>=1.2.4,<2.0',
+    'prettytable>=0.7.2,<1.0',
+    'pylint>=1.6.4,<2.0',
+    'six>=1.10.0,<2.0',
 ]
 
 setup(

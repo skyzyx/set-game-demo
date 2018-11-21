@@ -217,16 +217,17 @@ To begin…
 1. You need to install all of the supported versions of Python. (This will take a while.) If you would prefer to install your own copies of the supported Python versions (listed above), feel free to manage them yourself.
 
    ```bash
-   pyenv install 3.6.0b1 && \
-   pyenv install 3.5.2 && \
-   pyenv install 3.4.5 && \
-   pyenv install 3.3.6 && \
-   pyenv install 2.7.12 && \
-   pyenv install pypy-5.3.1 && \
-   pyenv install pypy3-2.4.0 && \
+   pyenv install 3.7.1 && \
+   pyenv install 3.6.7 && \
+   pyenv install 3.5.6 && \
+   pyenv install 3.4.9 && \
+   pyenv install 3.3.7 && \
+   pyenv install 2.7.15 && \
+   pyenv install pypy-5.7.1 && \
+   pyenv install pypy3.5-6.0.0 && \
    pyenv rehash && \
    eval "$(pyenv init -)" && \
-   pyenv global system 3.6.0b1 3.5.2 3.4.5 3.3.6 2.7.12 pypy-5.3.1 pypy3-2.4.0
+   pyenv global system 2.7.15 3.3.7 3.4.9 3.5.6 3.6.7 3.7.1 pypy-5.7.1 pypy3.5-6.0.0
    ```
 
    To verify that the installation and configuration were successful, you can run `pyenv versions`. You should see a `*` character in front of every version that we just installed.

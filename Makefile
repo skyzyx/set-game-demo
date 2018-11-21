@@ -33,7 +33,7 @@ pushdocs: docs
 
 .PHONY: readme
 readme:
-	pandoc -r markdown_github -w rst -o README.rst README.md
+	pandoc -r gfm -w rst -o README.rst README.md
 
 .PHONY: buildpip
 buildpip: clean
