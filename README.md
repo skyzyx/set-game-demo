@@ -206,9 +206,10 @@ Testing occurs against the following versions:
 * Python 3.3
 * Python 3.4
 * Python 3.5
-* Python 3.6 (beta)
-* Pypy (≈2.7.10)
-* Pypy3 (≈3.2.5)
+* Python 3.6
+* Python 3.7
+* Pypy
+* Pypy3
 
 To begin…
 
