@@ -286,8 +286,8 @@ class SetGame(object):
                     card2[attribute],
                     card3[attribute],
                 ]) is False
-                    and
-                    SetGame.__all_same([
+
+                    and SetGame.__all_same([
                         card1[attribute],
                         card2[attribute],
                         card3[attribute],
@@ -435,6 +435,7 @@ def main():  # pragma: no cover
 
     else:
         game.play()
+
 
 if __name__ == "__main__":  # pragma: no cover
     main()
