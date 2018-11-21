@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 1.0.1
+## 1.0.1 - 2018-11-21
 
 * Updated the dependency versions.
 * Updated the docs for running tests.
